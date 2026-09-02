@@ -14,13 +14,18 @@
 
 int	prepa_main(char *buf, t_tabs tabs)
 {
-	tabs.tab_char = ft_tab_1(buf);
-	if (tabs.tab_char == NULL)
-		return (1);
+	int	i;
+
 	tabs.tab_int = ft_tab_2(buf);
 	add_values(tabs, buf);
-	ft_putnbr_table(tabs.tab_int);
 	make_square(tabs, buf);
+	i = 0;
+	while (tabs.tab_char[i])
+	{
+		ft_putstr(tabs.tab_char[i]);
+		ft_putstr("\n");
+		i++;
+	}
 	return (0);
 }
 
@@ -45,17 +50,7 @@ int	main(int argc, char *argv[])
 			if (tabs.tab_char == NULL)
 				return (1);
 			tabs.tab_int = ft_tab_2(buf);
-			add_values(tabs, buf);
-			ft_putnbr_table(tabs.tab_int);
-			make_square(tabs, buf);
-			write (1, "\n", 1);
-			i = 0;
-			while (tabs.tab_char[i])
-			{
-				ft_putstr(tabs.tab_char[i]);
-				ft_putstr("\n");
-				i++;
-			}
+			prepa_main(buf, tabs);
 			free_all(tabs, buf);
 			i++;
 		}
