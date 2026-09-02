@@ -16,55 +16,63 @@
 int	ft_strlen(char *str);
 int	ft_count_lines(char *str);
 
-char	***tab_3d(char *buf)
+char	**tab_1(char *buf)
 {
 	int		i;
 	int		j;
 	int		k;
+	char	**tab;
 
 	i = 0;
-	j = 0;
 	k = 0;
-
-	tab = ft_malloc_gr_tab(buf);
-	if (tab == NULL)
-		return (NULL);
-	tab[0] = ft_malloc_pt_tab(buf);
-	if (tab[0] == NULL)
-		return (NULL);
-	tab[1] = ft_malloc_pt_tab(buf);
-	if (tab[1] == NULL)
+	j = 0;
+	tab[j] = ft_malloc_tab(buf);
+	if (tab[j] == NULL)
 		return (NULL);
 	while (buf[i])
 	{
-		tab[0][j] = ft_malloc_lines(buf);
-		tab[1][j] = ft_malloc_lines(buf);
+		tab[j][k] = ft_malloc_lines(buf);
 		while (buf[i] != '\n')
 		{
-			tab[0][j][k] = buf[i];
-			i++;
-			k++;
+			tab[j][k++] = buf[i++];
 		}
-		tab[0][j][k] = '\0';
-		j++;
-		i++;
+		tab[j][k] = '\0';
 		k = 0;
+		i++;
+		j++;
 	}
 	return (tab);
 }
 
-char	***ft_malloc_gr_tab(char *buf)
+char	**tab_2(void)
 {
-	int		count;
-	char	***gr_tab;
+	int		i;
+	int		j;
+	int		k;
+	char	**tab2;
 
-	gr_tab = malloc(2 * sizeof(char **));
-	if (gr_tab == NULL)
+	i = 0;
+	k = 0;
+	j = 0;
+	tab[j] = ft_malloc_tab(buf);
+	if (tab[j] == NULL)
 		return (NULL);
-	return (gr_tab);
+	while (buf[i])
+	{
+		tab[j][k] = ft_malloc_lines(buf);
+		while (buf[i] != '\n')
+		{
+			tab[j][k++] = '0';
+		}
+		tab[j][k] = '\0';
+		k = 0;
+		i++;
+		j++;
+	}
+	return (tab2);
 }
 
-char	**ft_malloc_pt_tab(char *buf)
+char	**ft_malloc_tab(char *buf)
 {
 	int		count;
 	char	**pt_tab;
