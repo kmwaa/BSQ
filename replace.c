@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                         ::::::::           */
-/*   replace.c                                           :+:    :+:           */
-/*                                                      +:+                   */
-/*   By: kcacciab <marvin@42.fr>                       +#+                    */
-/*                                                    +#+                     */
-/*   Created: 2026/09/02 20:36:54 by kcacciab       #+#    #+#                */
-/*   Updated: 2026/09/02 20:36:57 by kcacciab       ########   odam.nl        */
+/*                                                        :::      ::::::::   */
+/*   replace.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kmwaa <kmwaa@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/02 20:36:54 by kcacciab          #+#    #+#             */
+/*   Updated: 2026/09/02 21:46:02 by kmwaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ void	replace_tab(t_tabs tabs, t_square_center sc, int lines)
 	{
 		while (tabs.tab_char[y][x])
 		{
-			if (tabs.tab_int[y][x] == sc.size)
+			if (sc.size > 0 && tabs.tab_int[y][x] == sc.size)
 			{
 				quadruple_center_test(y, x, sc.size, tabs);
 			}

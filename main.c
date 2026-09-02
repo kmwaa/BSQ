@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                         ::::::::           */
-/*   main.c                                              :+:    :+:           */
-/*                                                      +:+                   */
-/*   By: kcacciab <marvin@42.fr>                       +#+                    */
-/*                                                    +#+                     */
-/*   Created: 2026/08/31 10:48:26 by kcacciab       #+#    #+#                */
-/*   Updated: 2026/08/31 10:48:28 by kcacciab       ########   odam.nl        */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kmwaa <kmwaa@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/08/31 10:48:26 by kcacciab          #+#    #+#             */
+/*   Updated: 2026/09/02 22:09:09 by kmwaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ int	main(int argc, char *argv[])
 		while (argv[i])
 		{
 			buf = get_ox(argv[i]);
+			if (buf == NULL)
+			{
+				i++;
+				continue;
+			}
 			tabs.tab_char = ft_tab_1(buf);
 			if (tabs.tab_char == NULL)
 				return (1);
