@@ -25,44 +25,28 @@ int	main(int argc, char *argv[])
 	{
 		while (argv[i])
 		{
-			ft_putstr(argv[i]);
-			ft_putstr("\n");
+			buf = get_ox(argv[i]);
+			tabs.tab_char = ft_tab_1(buf);
+			if (tabs.tab_char == NULL)
+				return (1);
+			tabs.tab_int = ft_tab_2(buf);
+			add_values(tabs, buf);
+			ft_putnbr_table(tabs.tab_int);
+			make_square(tabs, buf);
+			write (1, "\n", 1);
+			i = 0;
+			while (tabs.tab_char[i])
+			{
+				ft_putstr(tabs.tab_char[i]);
+				ft_putstr("\n");
+				i++;
+			}
+			free_char_arrays(tabs.tab_char, ft_count_lines(buf));
+			free_int_arrays(tabs.tab_int, ft_count_lines(buf));
+			free(buf);
 			i++;
 		}
 	}
-	
-	buf = get_ox("10.ox");
-	ft_putstr(buf);
-	write (1, "\n", 1);
-	write (1, "\n", 1);
-	tabs.tab_char = ft_tab_1(buf);
-	if (tabs.tab_char == NULL)
-		return (1);
-	i = 0;
-	while (tabs.tab_char[i])
-	{
-		ft_putstr(tabs.tab_char[i]);
-		ft_putstr("\n");
-		i++;
-	}
-	write (1, "\n", 1);
-	tabs.tab_int = ft_tab_2(buf);
-	ft_putnbr_table(tabs.tab_int);
-	write (1, "\n", 1);
-	add_values(tabs, buf);
 
-	ft_putnbr_table(tabs.tab_int);
-	make_square(tabs, buf);
-	write (1, "\n", 1);
-	i = 0;
-	while (tabs.tab_char[i])
-	{
-		ft_putstr(tabs.tab_char[i]);
-		ft_putstr("\n");
-		i++;
-	}
-	free_char_arrays(tabs.tab_char, ft_count_lines(buf));
-	free_int_arrays(tabs.tab_int, ft_count_lines(buf));
-	free(buf);
 	return (0);
 }

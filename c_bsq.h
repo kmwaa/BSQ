@@ -29,10 +29,22 @@ struct s_iter
 	int		i;
 	int		j;
 	int		k;
+	int		x;
+	int		y;
+	int		test;
 };
 
-typedef struct s_tabs	t_tabs ;
-typedef struct s_iter	t_iter ;
+struct s_square_center
+{
+	int	size;
+	int	x;
+	int	y;
+};
+
+
+typedef struct s_square_center	t_square_center ;
+typedef struct s_tabs			t_tabs ;
+typedef struct s_iter			t_iter ;
 
 void	ft_putstr(char *str);
 char	*get_ox(char	*link_file);
@@ -50,5 +62,12 @@ char	**ft_malloc_tab_1(char *buf);
 char	*ft_malloc_lines_tab_1(char *buf);
 int		**ft_malloc_tab_2(char *buf);
 int		*ft_malloc_lines_tab_2(char *buf);
+void	square_replace(int y, int x, int size, t_tabs tabs);
+void	quadruple_center_test(int y, int x, int size, t_tabs tabs);
+void	replace_tab(t_tabs tabs, t_square_center sc, int lines);
+void	quadruple_center_test(int y, int x, int size, t_tabs tabs);
+void	square_replace(int y, int x, int size, t_tabs tabs);
+t_iter	square_loop(t_tabs tabs, t_iter iter, t_square_center sc);
+void	make_square(t_tabs tabs, char *buf);
 
 #endif

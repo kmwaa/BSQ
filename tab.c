@@ -12,10 +12,21 @@
 
 #include "c_bsq.h"
 
+t_iter	loop_char(char *buf, t_iter iter, char **tab_1)
+{
+	while (buf[iter.i] != '\n' && buf[iter.i] != '\0')
+	{
+		tab_1[iter.j][iter.k] = buf[iter.i];
+		iter.k++;
+		iter.i++;
+	}
+	return (iter);
+}
+
 char	**ft_tab_1(char *buf)
 {
 	char	**tab_1;
-	t_iter iter;
+	t_iter	iter;
 
 	iter.i = 0;
 	iter.k = 0;
@@ -26,12 +37,7 @@ char	**ft_tab_1(char *buf)
 	while (buf[iter.i])
 	{
 		tab_1[iter.j] = ft_malloc_lines_tab_1(buf);
-		while (buf[iter.i] != '\n' && buf[iter.i] != '\0')
-		{
-			tab_1[iter.j][iter.k] = buf[iter.i];
-			iter.k++;
-			iter.i++;
-		}
+		iter = loop_char(buf, iter, tab_1);
 		tab_1[iter.j][iter.k] = '\0';
 		iter.k = 0;
 		if (buf[iter.i] == '\n')
@@ -44,30 +50,28 @@ char	**ft_tab_1(char *buf)
 
 int	**ft_tab_2(char *buf)
 {
-	int		i;
-	int		j;
-	int		k;
 	int		**tab_2;
+	t_iter	iter;
 
-	i = 0;
-	j = 0;
-	k = 0;
+	iter.i = 0;
+	iter.j = 0;
+	iter.k = 0;
 	tab_2 = ft_malloc_tab_2(buf);
-	while (buf[i])
+	while (buf[iter.i])
 	{
-		tab_2[j] = ft_malloc_lines_tab_2(buf);
-		while (buf[i] != '\n' && buf[i] != '\0')
+		tab_2[iter.j] = ft_malloc_lines_tab_2(buf);
+		while (buf[iter.i] != '\n' && buf[iter.i] != '\0')
 		{
-			tab_2[j][k] = 0;
-			k++;
-			i++;
+			tab_2[iter.j][iter.k] = 0;
+			iter.k++;
+			iter.i++;
 		}
-		tab_2[j][k] = -1;
-		k = 0;
-		if (buf[i] == '\n')
-			i++;
-		j++;
+		tab_2[iter.j][iter.k] = -1;
+		iter.k = 0;
+		if (buf[iter.i] == '\n')
+			iter.i++;
+		iter.j++;
 	}
-	tab_2[j] = NULL;
+	tab_2[iter.j] = NULL;
 	return (tab_2);
 }

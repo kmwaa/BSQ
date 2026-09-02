@@ -10,134 +10,40 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-struct tabs
+#include "c_bsq.h"
+
+t_iter	square_loop(t_tabs tabs, t_iter iter, t_square_center sc)
 {
-    char	**tab_char; 
-	int 	**tab_int;
-};
-
-
-struct square_center
-{
-	int	size;
-    int	x; 
-	int	y;
-};
-
-typedef struct tabs Tabs ;
-typedef struct square_center Square_Center ;
-
-int	ft_count_lines(char *str);
-int	ft_count_colones(char *str);
-
-void square_replace(int y, int x, int size, Tabs tabs)
-{
-	int	i;
-	int	j;
-
-	i = size * -1;
-	j = size * -1;
-	while (i <= size)
+	while (tabs.tab_char[iter.y][iter.x])
 	{
-		while (j <= size)
+		if (tabs.tab_int[iter.y][iter.x] > sc.size)
 		{
-			tabs.tab_char[y + j][x + i] = 'X';
-			j++;
+			sc.size = tabs.tab_int[iter.y][iter.x];
+			sc.x = iter.x;
+			sc.y = iter.y;
 		}
-		j = size * -1;
-		i++;
+		iter.x++;
 	}
+	return (iter);
 }
 
-void quadruple_center_test(int y, int x, int size, Tabs tabs)
+void	make_square(t_tabs tabs, char *buf)
 {
-	int i;
-	int j;
-	int test;
+	t_iter			iter;
+	t_square_center	sc;
+	int				lines;
 
-	i = -1;
-	j = -1;
-	test = 0;
-	if (tabs.tab_int[y][x + 1] == size)
-	{
-		if (tabs.tab_int[y + 1][x + 1] == size)
-		{
-			if (tabs.tab_int[y + 1][x] == size)
-			{
-				square_replace(y, x, size, tabs);
-				square_replace(y, x + 1, size, tabs);
-				square_replace(y + 1, x + 1, size, tabs);
-				square_replace(y + 1, x, size, tabs);
-			}
-		}
-	}
-	else if (tabs.tab_int[y][x + 1] != size)
-	{
-		while (i <= 1 && test == 0)
-		{
-			while (j <= 1 && test == 0)
-			{
-				if (tabs.tab_int[y + i][x + j] == size)
-					test = 1;
-				j++;
-			}
-			j = -1;
-			i++;
-		}
-		if (test == 0)
-			square_replace(y, x, size, tabs);
-	}
-}
-
-void	replace_tab(Tabs tabs, Square_Center sc, int lines)
-{
-	int y;
-	int x;
-
-	y = 0;
-	x = 0;
-	while (y < lines - 1)
-	{
-		while (tabs.tab_char[y][x])
-		{
-			if (tabs.tab_int[y][x] == sc.size)
-			{
-				quadruple_center_test(y, x, sc.size, tabs);
-			}
-			x++;
-		}
-		x = 0;
-		y++;
-	}
-}
-
-void	make_square(Tabs tabs, char *buf)
-{
-	int x;
-	int y;
-	Square_Center sc;
-	int lines;
-
-	x = 0;
-	y = 0;
+	iter.x = 0;
+	iter.y = 0;
 	sc.x = 0;
 	sc.y = 0;
 	sc.size = 0;
 	lines = ft_count_lines(buf);
-	while (y < lines - 1)
+	while (iter.y < lines - 1)
 	{
-		while (tabs.tab_char[y][x])
-		{
-			if (tabs.tab_int[y][x] > sc.size)
-			{
-				sc.size = tabs.tab_int[y][x];
-				sc.x = x;
-				sc.y = y;
-			}
-			x++;
-		}
-		x = 0;
-		y++;
+		iter = square_loop(tabs, iter, sc);
+		iter.x = 0;
+		iter.y++;
 	}
 	replace_tab(tabs, sc, lines);
 }

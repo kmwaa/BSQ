@@ -1,0 +1,8327 @@
+Starting program: /home/nchaille/rendu/BSQ/bsq_debug 
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffe058) at main.c:31
+31		ft_putstr(argv[0]);
+32		ft_putstr("\n");
+33		i = 1;
+34		if (argc > 1)
+43		buf = get_ox("10.ox");
+44		ft_putstr(buf);
+45		write (1, "\n", 1);
+46		tab_1 = ft_tab_1(buf);
+ft_tab_1 (buf=0x5555555596b0 "o........o\n...o....o.\no..o......\n..o..o.o..\n.o........\n.o.o.o.o..\n.o.....o..\n...o......\n...o.o..oo\n.o..o..oo.") at tab_3d.c:33
+33		i = 0;
+1: i = 21845
+2: k = 21845
+3: j = 1431650368
+4: **tab_1 = <error: Cannot access memory at address 0x2e2e2e2e2e2e2e6f>
+34		k = 0;
+1: i = 0
+2: k = 21845
+3: j = 1431650368
+4: **tab_1 = <error: Cannot access memory at address 0x2e2e2e2e2e2e2e6f>
+35		j = 0;
+1: i = 0
+2: k = 0
+3: j = 1431650368
+4: **tab_1 = <error: Cannot access memory at address 0x2e2e2e2e2e2e2e6f>
+36		tab_1 = ft_malloc_tab_1(buf);
+1: i = 0
+2: k = 0
+3: j = 0
+4: **tab_1 = <error: Cannot access memory at address 0x2e2e2e2e2e2e2e6f>
+37		if (tab_1[j] == NULL)
+1: i = 0
+2: k = 0
+3: j = 0
+4: **tab_1 = <error: Cannot access memory at address 0x0>
+5: tab_1 = (char **) 0x555555559ad0
+38			return (NULL);
+1: i = 0
+2: k = 0
+3: j = 0
+4: **tab_1 = <error: Cannot access memory at address 0x0>
+5: tab_1 = (char **) 0x555555559ad0
+52	}
+1: i = 0
+2: k = 0
+3: j = 0
+4: **tab_1 = <error: Cannot access memory at address 0x0>
+5: tab_1 = (char **) 0x555555559ad0
+main (argc=1, argv=0x7fffffffe058) at main.c:47
+47		i = 0;
+48		while (tab_1[i])
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000555555555401 in main (argc=1, argv=0x7fffffffe058) at main.c:48
+48		while (tab_1[i])
+
+Program terminated with signal SIGSEGV, Segmentation fault.
+The program no longer exists.
+Breakpoint 1 at 0x1439: file tab_3d.c, line 33.
+Starting program: /home/nchaille/rendu/BSQ/bsq_debug 
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, ft_tab_1 (buf=0x5555555596b0 "o........o\n...o....o.\no..o......\n..o..o.o..\n.o........\n.o.o.o.o..\n.o.....o..\n...o......\n...o.o..oo\n.o..o..oo.") at tab_3d.c:33
+33		i = 0;
+1: i = 21845
+2: j = 1431650368
+3: k = 21845
+4: tab_1 = (char **) 0x5555555596b0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = <error: Cannot access memory at address 0x5557ffff98b0>
+7: tab_1[j][k] = <error: Cannot access memory at address 0x5557ffff98b0>
+34		k = 0;
+1: i = 0
+2: j = 1431650368
+3: k = 21845
+4: tab_1 = (char **) 0x5555555596b0
+5: buf[i] = 111 'o'
+6: tab_1[j] = <error: Cannot access memory at address 0x5557ffff98b0>
+7: tab_1[j][k] = <error: Cannot access memory at address 0x5557ffff98b0>
+35		j = 0;
+1: i = 0
+2: j = 1431650368
+3: k = 0
+4: tab_1 = (char **) 0x5555555596b0
+5: buf[i] = 111 'o'
+6: tab_1[j] = <error: Cannot access memory at address 0x5557ffff98b0>
+7: tab_1[j][k] = <error: Cannot access memory at address 0x5557ffff98b0>
+36		tab_1 = ft_malloc_tab_1(buf);
+1: i = 0
+2: j = 0
+3: k = 0
+4: tab_1 = (char **) 0x5555555596b0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x2e2e2e2e2e2e2e6f <error: Cannot access memory at address 0x2e2e2e2e2e2e2e6f>
+7: tab_1[j][k] = <error: Cannot access memory at address 0x2e2e2e2e2e2e2e6f>
+37		while (buf[i])
+1: i = 0
+2: j = 0
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+39			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 0
+2: j = 0
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+40			while (buf[i] != '\n')
+1: i = 0
+2: j = 0
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b30 ""
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k++] = buf[i++];
+1: i = 0
+2: j = 0
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b30 ""
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 1
+2: j = 0
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k++] = buf[i++];
+1: i = 1
+2: j = 0
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 2
+2: j = 0
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k++] = buf[i++];
+1: i = 2
+2: j = 0
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 3
+2: j = 0
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o.."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k++] = buf[i++];
+1: i = 3
+2: j = 0
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o.."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 4
+2: j = 0
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o..."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k++] = buf[i++];
+1: i = 4
+2: j = 0
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o..."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 5
+2: j = 0
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o...."
+7: tab_1[j][k] = 0 '\000'
+Breakpoint 1 at 0x1439: file tab_3d.c, line 33.
+Starting program: /home/nchaille/rendu/BSQ/bsq_debug 
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, ft_tab_1 (buf=0x5555555596b0 "o........o\n...o....o.\no..o......\n..o..o.o..\n.o........\n.o.o.o.o..\n.o.....o..\n...o......\n...o.o..oo\n.o..o..oo.") at tab_3d.c:33
+33		i = 0;
+1: i = 21845
+2: j = 1431650368
+3: k = 21845
+4: tab_1 = (char **) 0x5555555596b0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = <error: Cannot access memory at address 0x5557ffff98b0>
+7: tab_1[j][k] = <error: Cannot access memory at address 0x5557ffff98b0>
+34		k = 0;
+1: i = 0
+2: j = 1431650368
+3: k = 21845
+4: tab_1 = (char **) 0x5555555596b0
+5: buf[i] = 111 'o'
+6: tab_1[j] = <error: Cannot access memory at address 0x5557ffff98b0>
+7: tab_1[j][k] = <error: Cannot access memory at address 0x5557ffff98b0>
+35		j = 0;
+1: i = 0
+2: j = 1431650368
+3: k = 0
+4: tab_1 = (char **) 0x5555555596b0
+5: buf[i] = 111 'o'
+6: tab_1[j] = <error: Cannot access memory at address 0x5557ffff98b0>
+7: tab_1[j][k] = <error: Cannot access memory at address 0x5557ffff98b0>
+36		tab_1 = ft_malloc_tab_1(buf);
+1: i = 0
+2: j = 0
+3: k = 0
+4: tab_1 = (char **) 0x5555555596b0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x2e2e2e2e2e2e2e6f <error: Cannot access memory at address 0x2e2e2e2e2e2e2e6f>
+7: tab_1[j][k] = <error: Cannot access memory at address 0x2e2e2e2e2e2e2e6f>
+37		while (buf[i])
+1: i = 0
+2: j = 0
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+39			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 0
+2: j = 0
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+40			while (buf[i] != '\n')
+1: i = 0
+2: j = 0
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b30 ""
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 0
+2: j = 0
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b30 ""
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 0
+2: j = 0
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b30 "o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 0
+2: j = 0
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b30 "o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 1
+2: j = 0
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 1
+2: j = 0
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 1
+2: j = 0
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 1
+2: j = 0
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 2
+2: j = 0
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 2
+2: j = 0
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 2
+2: j = 0
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o.."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 2
+2: j = 0
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o.."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 3
+2: j = 0
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o.."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 3
+2: j = 0
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o.."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 3
+2: j = 0
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o..."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 3
+2: j = 0
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o..."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 4
+2: j = 0
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o..."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 4
+2: j = 0
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o..."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 4
+2: j = 0
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o...."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 4
+2: j = 0
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o...."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 5
+2: j = 0
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o...."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 5
+2: j = 0
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o...."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 5
+2: j = 0
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o....."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 5
+2: j = 0
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o....."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 6
+2: j = 0
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o....."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 6
+2: j = 0
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o....."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 6
+2: j = 0
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o......"
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 6
+2: j = 0
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o......"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 7
+2: j = 0
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o......"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 7
+2: j = 0
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o......"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 7
+2: j = 0
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o......."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 7
+2: j = 0
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o......."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 8
+2: j = 0
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o......."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 8
+2: j = 0
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o......."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 8
+2: j = 0
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o........"
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 8
+2: j = 0
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o........"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 9
+2: j = 0
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b30 "o........"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 9
+2: j = 0
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b30 "o........"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 9
+2: j = 0
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b30 "o........o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 9
+2: j = 0
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b30 "o........o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 10
+2: j = 0
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559b30 "o........o"
+7: tab_1[j][k] = 0 '\000'
+46			tab_1[j][k] = '\0';
+1: i = 10
+2: j = 0
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559b30 "o........o"
+7: tab_1[j][k] = 0 '\000'
+47			k = 0;
+1: i = 10
+2: j = 0
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559b30 "o........o"
+7: tab_1[j][k] = 0 '\000'
+48			i++;
+1: i = 10
+2: j = 0
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559b30 "o........o"
+7: tab_1[j][k] = 111 'o'
+49			j++;
+1: i = 11
+2: j = 0
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b30 "o........o"
+7: tab_1[j][k] = 111 'o'
+37		while (buf[i])
+1: i = 11
+2: j = 1
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+39			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 11
+2: j = 1
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+40			while (buf[i] != '\n')
+1: i = 11
+2: j = 1
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 ""
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 11
+2: j = 1
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 ""
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 11
+2: j = 1
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 11
+2: j = 1
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 12
+2: j = 1
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 12
+2: j = 1
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 12
+2: j = 1
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 ".."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 12
+2: j = 1
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 ".."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 13
+2: j = 1
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 ".."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 13
+2: j = 1
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 ".."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 13
+2: j = 1
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "..."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 13
+2: j = 1
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "..."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 14
+2: j = 1
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b50 "..."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 14
+2: j = 1
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b50 "..."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 14
+2: j = 1
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b50 "...o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 14
+2: j = 1
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b50 "...o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 15
+2: j = 1
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 15
+2: j = 1
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 15
+2: j = 1
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 15
+2: j = 1
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 16
+2: j = 1
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 16
+2: j = 1
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 16
+2: j = 1
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o.."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 16
+2: j = 1
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o.."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 17
+2: j = 1
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o.."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 17
+2: j = 1
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o.."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 17
+2: j = 1
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o..."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 17
+2: j = 1
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o..."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 18
+2: j = 1
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o..."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 18
+2: j = 1
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o..."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 18
+2: j = 1
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o...."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 18
+2: j = 1
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o...."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 19
+2: j = 1
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b50 "...o...."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 19
+2: j = 1
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b50 "...o...."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 19
+2: j = 1
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b50 "...o....o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 19
+2: j = 1
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b50 "...o....o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 20
+2: j = 1
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o....o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 20
+2: j = 1
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o....o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 20
+2: j = 1
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o....o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 20
+2: j = 1
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b50 "...o....o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 21
+2: j = 1
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559b50 "...o....o."
+7: tab_1[j][k] = 0 '\000'
+46			tab_1[j][k] = '\0';
+1: i = 21
+2: j = 1
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559b50 "...o....o."
+7: tab_1[j][k] = 0 '\000'
+47			k = 0;
+1: i = 21
+2: j = 1
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559b50 "...o....o."
+7: tab_1[j][k] = 0 '\000'
+48			i++;
+1: i = 21
+2: j = 1
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559b50 "...o....o."
+7: tab_1[j][k] = 46 '.'
+49			j++;
+1: i = 22
+2: j = 1
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b50 "...o....o."
+7: tab_1[j][k] = 46 '.'
+37		while (buf[i])
+1: i = 22
+2: j = 2
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+39			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 22
+2: j = 2
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+40			while (buf[i] != '\n')
+1: i = 22
+2: j = 2
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b70 ""
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 22
+2: j = 2
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b70 ""
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 22
+2: j = 2
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b70 "o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 22
+2: j = 2
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b70 "o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 23
+2: j = 2
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 23
+2: j = 2
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 23
+2: j = 2
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 23
+2: j = 2
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 24
+2: j = 2
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 24
+2: j = 2
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 24
+2: j = 2
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o.."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 24
+2: j = 2
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o.."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 25
+2: j = 2
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b70 "o.."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 25
+2: j = 2
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b70 "o.."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 25
+2: j = 2
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b70 "o..o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 25
+2: j = 2
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b70 "o..o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 26
+2: j = 2
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 26
+2: j = 2
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 26
+2: j = 2
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 26
+2: j = 2
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 27
+2: j = 2
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 27
+2: j = 2
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 27
+2: j = 2
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o.."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 27
+2: j = 2
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o.."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 28
+2: j = 2
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o.."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 28
+2: j = 2
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o.."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 28
+2: j = 2
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o..."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 28
+2: j = 2
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o..."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 29
+2: j = 2
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o..."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 29
+2: j = 2
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o..."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 29
+2: j = 2
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o...."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 29
+2: j = 2
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o...."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 30
+2: j = 2
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o...."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 30
+2: j = 2
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o...."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 30
+2: j = 2
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o....."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 30
+2: j = 2
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o....."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 31
+2: j = 2
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o....."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 31
+2: j = 2
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o....."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 31
+2: j = 2
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o......"
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 31
+2: j = 2
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o......"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 32
+2: j = 2
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559b70 "o..o......"
+7: tab_1[j][k] = 0 '\000'
+46			tab_1[j][k] = '\0';
+1: i = 32
+2: j = 2
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559b70 "o..o......"
+7: tab_1[j][k] = 0 '\000'
+47			k = 0;
+1: i = 32
+2: j = 2
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559b70 "o..o......"
+7: tab_1[j][k] = 0 '\000'
+48			i++;
+1: i = 32
+2: j = 2
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559b70 "o..o......"
+7: tab_1[j][k] = 111 'o'
+49			j++;
+1: i = 33
+2: j = 2
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b70 "o..o......"
+7: tab_1[j][k] = 111 'o'
+37		while (buf[i])
+1: i = 33
+2: j = 3
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+39			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 33
+2: j = 3
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+40			while (buf[i] != '\n')
+1: i = 33
+2: j = 3
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 ""
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 33
+2: j = 3
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 ""
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 33
+2: j = 3
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 33
+2: j = 3
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 34
+2: j = 3
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 34
+2: j = 3
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 34
+2: j = 3
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 ".."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 34
+2: j = 3
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 ".."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 35
+2: j = 3
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b90 ".."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 35
+2: j = 3
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b90 ".."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 35
+2: j = 3
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b90 "..o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 35
+2: j = 3
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b90 "..o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 36
+2: j = 3
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 36
+2: j = 3
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 36
+2: j = 3
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 36
+2: j = 3
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 37
+2: j = 3
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 37
+2: j = 3
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 37
+2: j = 3
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o.."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 37
+2: j = 3
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o.."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 38
+2: j = 3
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b90 "..o.."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 38
+2: j = 3
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b90 "..o.."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 38
+2: j = 3
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b90 "..o..o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 38
+2: j = 3
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b90 "..o..o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 39
+2: j = 3
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o..o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 39
+2: j = 3
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o..o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 39
+2: j = 3
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o..o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 39
+2: j = 3
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o..o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 40
+2: j = 3
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b90 "..o..o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 40
+2: j = 3
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b90 "..o..o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 40
+2: j = 3
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b90 "..o..o.o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 40
+2: j = 3
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559b90 "..o..o.o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 41
+2: j = 3
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o..o.o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 41
+2: j = 3
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o..o.o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 41
+2: j = 3
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o..o.o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 41
+2: j = 3
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o..o.o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 42
+2: j = 3
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o..o.o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 42
+2: j = 3
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o..o.o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 42
+2: j = 3
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o..o.o.."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 42
+2: j = 3
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o..o.o.."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 43
+2: j = 3
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559b90 "..o..o.o.."
+7: tab_1[j][k] = 0 '\000'
+46			tab_1[j][k] = '\0';
+1: i = 43
+2: j = 3
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559b90 "..o..o.o.."
+7: tab_1[j][k] = 0 '\000'
+47			k = 0;
+1: i = 43
+2: j = 3
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559b90 "..o..o.o.."
+7: tab_1[j][k] = 0 '\000'
+48			i++;
+1: i = 43
+2: j = 3
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559b90 "..o..o.o.."
+7: tab_1[j][k] = 46 '.'
+49			j++;
+1: i = 44
+2: j = 3
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559b90 "..o..o.o.."
+7: tab_1[j][k] = 46 '.'
+37		while (buf[i])
+1: i = 44
+2: j = 4
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+39			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 44
+2: j = 4
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+40			while (buf[i] != '\n')
+1: i = 44
+2: j = 4
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ""
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 44
+2: j = 4
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ""
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 44
+2: j = 4
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 "."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 44
+2: j = 4
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 "."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 45
+2: j = 4
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bb0 "."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 45
+2: j = 4
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bb0 "."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 45
+2: j = 4
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bb0 ".o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 45
+2: j = 4
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bb0 ".o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 46
+2: j = 4
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 46
+2: j = 4
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 46
+2: j = 4
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 46
+2: j = 4
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 47
+2: j = 4
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 47
+2: j = 4
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 47
+2: j = 4
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o.."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 47
+2: j = 4
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o.."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 48
+2: j = 4
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o.."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 48
+2: j = 4
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o.."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 48
+2: j = 4
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o..."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 48
+2: j = 4
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o..."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 49
+2: j = 4
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o..."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 49
+2: j = 4
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o..."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 49
+2: j = 4
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o...."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 49
+2: j = 4
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o...."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 50
+2: j = 4
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o...."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 50
+2: j = 4
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o...."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 50
+2: j = 4
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o....."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 50
+2: j = 4
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o....."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 51
+2: j = 4
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o....."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 51
+2: j = 4
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o....."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 51
+2: j = 4
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o......"
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 51
+2: j = 4
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o......"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 52
+2: j = 4
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o......"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 52
+2: j = 4
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o......"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 52
+2: j = 4
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o......."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 52
+2: j = 4
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o......."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 53
+2: j = 4
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o......."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 53
+2: j = 4
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o......."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 53
+2: j = 4
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o........"
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 53
+2: j = 4
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o........"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 54
+2: j = 4
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559bb0 ".o........"
+7: tab_1[j][k] = 0 '\000'
+46			tab_1[j][k] = '\0';
+1: i = 54
+2: j = 4
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559bb0 ".o........"
+7: tab_1[j][k] = 0 '\000'
+47			k = 0;
+1: i = 54
+2: j = 4
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559bb0 ".o........"
+7: tab_1[j][k] = 0 '\000'
+48			i++;
+1: i = 54
+2: j = 4
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559bb0 ".o........"
+7: tab_1[j][k] = 46 '.'
+49			j++;
+1: i = 55
+2: j = 4
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bb0 ".o........"
+7: tab_1[j][k] = 46 '.'
+37		while (buf[i])
+1: i = 55
+2: j = 5
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+39			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 55
+2: j = 5
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+40			while (buf[i] != '\n')
+1: i = 55
+2: j = 5
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ""
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 55
+2: j = 5
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ""
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 55
+2: j = 5
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 "."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 55
+2: j = 5
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 "."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 56
+2: j = 5
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bd0 "."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 56
+2: j = 5
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bd0 "."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 56
+2: j = 5
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bd0 ".o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 56
+2: j = 5
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bd0 ".o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 57
+2: j = 5
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 57
+2: j = 5
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 57
+2: j = 5
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 57
+2: j = 5
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 58
+2: j = 5
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bd0 ".o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 58
+2: j = 5
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bd0 ".o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 58
+2: j = 5
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bd0 ".o.o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 58
+2: j = 5
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bd0 ".o.o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 59
+2: j = 5
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o.o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 59
+2: j = 5
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o.o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 59
+2: j = 5
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o.o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 59
+2: j = 5
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o.o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 60
+2: j = 5
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bd0 ".o.o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 60
+2: j = 5
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bd0 ".o.o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 60
+2: j = 5
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 60
+2: j = 5
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 61
+2: j = 5
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 61
+2: j = 5
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 61
+2: j = 5
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 61
+2: j = 5
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 62
+2: j = 5
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 62
+2: j = 5
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 62
+2: j = 5
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o.o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 62
+2: j = 5
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o.o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 63
+2: j = 5
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o.o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 63
+2: j = 5
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o.o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 63
+2: j = 5
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o.o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 63
+2: j = 5
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o.o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 64
+2: j = 5
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o.o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 64
+2: j = 5
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o.o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 64
+2: j = 5
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o.o.."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 64
+2: j = 5
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o.o.."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 65
+2: j = 5
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o.o.."
+7: tab_1[j][k] = 0 '\000'
+46			tab_1[j][k] = '\0';
+1: i = 65
+2: j = 5
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o.o.."
+7: tab_1[j][k] = 0 '\000'
+47			k = 0;
+1: i = 65
+2: j = 5
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o.o.."
+7: tab_1[j][k] = 0 '\000'
+48			i++;
+1: i = 65
+2: j = 5
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o.o.."
+7: tab_1[j][k] = 46 '.'
+49			j++;
+1: i = 66
+2: j = 5
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bd0 ".o.o.o.o.."
+7: tab_1[j][k] = 46 '.'
+37		while (buf[i])
+1: i = 66
+2: j = 6
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+39			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 66
+2: j = 6
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+40			while (buf[i] != '\n')
+1: i = 66
+2: j = 6
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ""
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 66
+2: j = 6
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ""
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 66
+2: j = 6
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 "."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 66
+2: j = 6
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 "."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 67
+2: j = 6
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bf0 "."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 67
+2: j = 6
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bf0 "."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 67
+2: j = 6
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bf0 ".o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 67
+2: j = 6
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bf0 ".o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 68
+2: j = 6
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 68
+2: j = 6
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 68
+2: j = 6
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 68
+2: j = 6
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 69
+2: j = 6
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 69
+2: j = 6
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 69
+2: j = 6
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o.."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 69
+2: j = 6
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o.."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 70
+2: j = 6
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o.."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 70
+2: j = 6
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o.."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 70
+2: j = 6
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o..."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 70
+2: j = 6
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o..."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 71
+2: j = 6
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o..."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 71
+2: j = 6
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o..."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 71
+2: j = 6
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o...."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 71
+2: j = 6
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o...."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 72
+2: j = 6
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o...."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 72
+2: j = 6
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o...."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 72
+2: j = 6
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o....."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 72
+2: j = 6
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o....."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 73
+2: j = 6
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bf0 ".o....."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 73
+2: j = 6
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bf0 ".o....."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 73
+2: j = 6
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bf0 ".o.....o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 73
+2: j = 6
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559bf0 ".o.....o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 74
+2: j = 6
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o.....o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 74
+2: j = 6
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o.....o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 74
+2: j = 6
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o.....o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 74
+2: j = 6
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o.....o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 75
+2: j = 6
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o.....o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 75
+2: j = 6
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o.....o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 75
+2: j = 6
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o.....o.."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 75
+2: j = 6
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o.....o.."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 76
+2: j = 6
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559bf0 ".o.....o.."
+7: tab_1[j][k] = 0 '\000'
+46			tab_1[j][k] = '\0';
+1: i = 76
+2: j = 6
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559bf0 ".o.....o.."
+7: tab_1[j][k] = 0 '\000'
+47			k = 0;
+1: i = 76
+2: j = 6
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559bf0 ".o.....o.."
+7: tab_1[j][k] = 0 '\000'
+48			i++;
+1: i = 76
+2: j = 6
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559bf0 ".o.....o.."
+7: tab_1[j][k] = 46 '.'
+49			j++;
+1: i = 77
+2: j = 6
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559bf0 ".o.....o.."
+7: tab_1[j][k] = 46 '.'
+37		while (buf[i])
+1: i = 77
+2: j = 7
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+39			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 77
+2: j = 7
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+40			while (buf[i] != '\n')
+1: i = 77
+2: j = 7
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 ""
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 77
+2: j = 7
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 ""
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 77
+2: j = 7
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 77
+2: j = 7
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 78
+2: j = 7
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 78
+2: j = 7
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 78
+2: j = 7
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 ".."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 78
+2: j = 7
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 ".."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 79
+2: j = 7
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 ".."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 79
+2: j = 7
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 ".."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 79
+2: j = 7
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "..."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 79
+2: j = 7
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "..."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 80
+2: j = 7
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c10 "..."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 80
+2: j = 7
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c10 "..."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 80
+2: j = 7
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c10 "...o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 80
+2: j = 7
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c10 "...o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 81
+2: j = 7
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 81
+2: j = 7
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 81
+2: j = 7
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 81
+2: j = 7
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 82
+2: j = 7
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 82
+2: j = 7
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 82
+2: j = 7
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o.."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 82
+2: j = 7
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o.."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 83
+2: j = 7
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o.."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 83
+2: j = 7
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o.."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 83
+2: j = 7
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o..."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 83
+2: j = 7
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o..."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 84
+2: j = 7
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o..."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 84
+2: j = 7
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o..."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 84
+2: j = 7
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o...."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 84
+2: j = 7
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o...."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 85
+2: j = 7
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o...."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 85
+2: j = 7
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o...."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 85
+2: j = 7
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o....."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 85
+2: j = 7
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o....."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 86
+2: j = 7
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o....."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 86
+2: j = 7
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o....."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 86
+2: j = 7
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o......"
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 86
+2: j = 7
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o......"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 87
+2: j = 7
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559c10 "...o......"
+7: tab_1[j][k] = 0 '\000'
+46			tab_1[j][k] = '\0';
+1: i = 87
+2: j = 7
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559c10 "...o......"
+7: tab_1[j][k] = 0 '\000'
+47			k = 0;
+1: i = 87
+2: j = 7
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559c10 "...o......"
+7: tab_1[j][k] = 0 '\000'
+48			i++;
+1: i = 87
+2: j = 7
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559c10 "...o......"
+7: tab_1[j][k] = 46 '.'
+49			j++;
+1: i = 88
+2: j = 7
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c10 "...o......"
+7: tab_1[j][k] = 46 '.'
+37		while (buf[i])
+1: i = 88
+2: j = 8
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+39			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 88
+2: j = 8
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+40			while (buf[i] != '\n')
+1: i = 88
+2: j = 8
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 ""
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 88
+2: j = 8
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 ""
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 88
+2: j = 8
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 88
+2: j = 8
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 89
+2: j = 8
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 89
+2: j = 8
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 89
+2: j = 8
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 ".."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 89
+2: j = 8
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 ".."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 90
+2: j = 8
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 ".."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 90
+2: j = 8
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 ".."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 90
+2: j = 8
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "..."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 90
+2: j = 8
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "..."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 91
+2: j = 8
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c30 "..."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 91
+2: j = 8
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c30 "..."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 91
+2: j = 8
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c30 "...o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 91
+2: j = 8
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c30 "...o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 92
+2: j = 8
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "...o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 92
+2: j = 8
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "...o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 92
+2: j = 8
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "...o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 92
+2: j = 8
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "...o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 93
+2: j = 8
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c30 "...o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 93
+2: j = 8
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c30 "...o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 93
+2: j = 8
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c30 "...o.o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 93
+2: j = 8
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c30 "...o.o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 94
+2: j = 8
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "...o.o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 94
+2: j = 8
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "...o.o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 94
+2: j = 8
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "...o.o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 94
+2: j = 8
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "...o.o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 95
+2: j = 8
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "...o.o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 95
+2: j = 8
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "...o.o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 95
+2: j = 8
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "...o.o.."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 95
+2: j = 8
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "...o.o.."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 96
+2: j = 8
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c30 "...o.o.."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 96
+2: j = 8
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c30 "...o.o.."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 96
+2: j = 8
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c30 "...o.o..o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 96
+2: j = 8
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c30 "...o.o..o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 97
+2: j = 8
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c30 "...o.o..o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 97
+2: j = 8
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c30 "...o.o..o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 97
+2: j = 8
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c30 "...o.o..oo"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 97
+2: j = 8
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c30 "...o.o..oo"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 98
+2: j = 8
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559c30 "...o.o..oo"
+7: tab_1[j][k] = 0 '\000'
+46			tab_1[j][k] = '\0';
+1: i = 98
+2: j = 8
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559c30 "...o.o..oo"
+7: tab_1[j][k] = 0 '\000'
+47			k = 0;
+1: i = 98
+2: j = 8
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559c30 "...o.o..oo"
+7: tab_1[j][k] = 0 '\000'
+48			i++;
+1: i = 98
+2: j = 8
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 10 '\n'
+6: tab_1[j] = 0x555555559c30 "...o.o..oo"
+7: tab_1[j][k] = 46 '.'
+49			j++;
+1: i = 99
+2: j = 8
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c30 "...o.o..oo"
+7: tab_1[j][k] = 46 '.'
+37		while (buf[i])
+1: i = 99
+2: j = 9
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+39			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 99
+2: j = 9
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x0
+7: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+40			while (buf[i] != '\n')
+1: i = 99
+2: j = 9
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ""
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 99
+2: j = 9
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ""
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 99
+2: j = 9
+3: k = 0
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 "."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 99
+2: j = 9
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 "."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 100
+2: j = 9
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c50 "."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 100
+2: j = 9
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c50 "."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 100
+2: j = 9
+3: k = 1
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c50 ".o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 100
+2: j = 9
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c50 ".o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 101
+2: j = 9
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 101
+2: j = 9
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 101
+2: j = 9
+3: k = 2
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 101
+2: j = 9
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 102
+2: j = 9
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 102
+2: j = 9
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 102
+2: j = 9
+3: k = 3
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o.."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 102
+2: j = 9
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o.."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 103
+2: j = 9
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c50 ".o.."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 103
+2: j = 9
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c50 ".o.."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 103
+2: j = 9
+3: k = 4
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c50 ".o..o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 103
+2: j = 9
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c50 ".o..o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 104
+2: j = 9
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o..o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 104
+2: j = 9
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o..o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 104
+2: j = 9
+3: k = 5
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o..o."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 104
+2: j = 9
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o..o."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 105
+2: j = 9
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o..o."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 105
+2: j = 9
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o..o."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 105
+2: j = 9
+3: k = 6
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o..o.."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 105
+2: j = 9
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o..o.."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 106
+2: j = 9
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c50 ".o..o.."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 106
+2: j = 9
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c50 ".o..o.."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 106
+2: j = 9
+3: k = 7
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c50 ".o..o..o"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 106
+2: j = 9
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c50 ".o..o..o"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 107
+2: j = 9
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c50 ".o..o..o"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 107
+2: j = 9
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c50 ".o..o..o"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 107
+2: j = 9
+3: k = 8
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo"
+7: tab_1[j][k] = 111 'o'
+44				i++;
+1: i = 107
+2: j = 9
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 111 'o'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo"
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 108
+2: j = 9
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo"
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 108
+2: j = 9
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo"
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 108
+2: j = 9
+3: k = 9
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 46 '.'
+44				i++;
+1: i = 108
+2: j = 9
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 46 '.'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 109
+2: j = 9
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 109
+2: j = 9
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 109
+2: j = 9
+3: k = 10
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+44				i++;
+1: i = 109
+2: j = 9
+3: k = 11
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 110
+2: j = 9
+3: k = 11
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 110
+2: j = 9
+3: k = 11
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 110
+2: j = 9
+3: k = 11
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+44				i++;
+1: i = 110
+2: j = 9
+3: k = 12
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 111
+2: j = 9
+3: k = 12
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 111
+2: j = 9
+3: k = 12
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 111
+2: j = 9
+3: k = 12
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+44				i++;
+1: i = 111
+2: j = 9
+3: k = 13
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 112
+2: j = 9
+3: k = 13
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 112
+2: j = 9
+3: k = 13
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 112
+2: j = 9
+3: k = 13
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+44				i++;
+1: i = 112
+2: j = 9
+3: k = 14
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 113
+2: j = 9
+3: k = 14
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 113
+2: j = 9
+3: k = 14
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 113
+2: j = 9
+3: k = 14
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+44				i++;
+1: i = 113
+2: j = 9
+3: k = 15
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 114
+2: j = 9
+3: k = 15
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 114
+2: j = 9
+3: k = 15
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 114
+2: j = 9
+3: k = 15
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+44				i++;
+1: i = 114
+2: j = 9
+3: k = 16
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 115
+2: j = 9
+3: k = 16
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 115
+2: j = 9
+3: k = 16
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 115
+2: j = 9
+3: k = 16
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+44				i++;
+1: i = 115
+2: j = 9
+3: k = 17
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+40			while (buf[i] != '\n')
+1: i = 116
+2: j = 9
+3: k = 17
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+42				tab_1[j][k] = buf[i];
+1: i = 116
+2: j = 9
+3: k = 17
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+43				k++;
+1: i = 116
+2: j = 9
+3: k = 17
+4: tab_1 = (char **) 0x555555559ad0
+5: buf[i] = 0 '\000'
+6: tab_1[j] = 0x555555559c50 ".o..o..oo."
+7: tab_1[j][k] = 0 '\000'
+Breakpoint 1 at 0x1439: file tab_3d.c, line 33.
+Starting program: /home/nchaille/rendu/BSQ/bsq_debug 
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, ft_tab_1 (buf=0x5555555596b0 "o........o\n...o....o.\no..o......\n..o..o.o..\n.o........\n.o.o.o.o..\n.o.....o..\n...o......\n...o.o..oo\n.o..o..oo.") at tab_3d.c:33
+33		i = 0;
+1: i = 21845
+2: k = 21845
+3: j = 1431650368
+4: tab_1[j] = <error: Cannot access memory at address 0x5557ffff98b0>
+5: tab_1[j][k] = <error: Cannot access memory at address 0x5557ffff98b0>
+6: buf[i] = 0 '\000'
+34		k = 0;
+1: i = 0
+2: k = 21845
+3: j = 1431650368
+4: tab_1[j] = <error: Cannot access memory at address 0x5557ffff98b0>
+5: tab_1[j][k] = <error: Cannot access memory at address 0x5557ffff98b0>
+6: buf[i] = 111 'o'
+35		j = 0;
+1: i = 0
+2: k = 0
+3: j = 1431650368
+4: tab_1[j] = <error: Cannot access memory at address 0x5557ffff98b0>
+5: tab_1[j][k] = <error: Cannot access memory at address 0x5557ffff98b0>
+6: buf[i] = 111 'o'
+36		tab_1 = ft_malloc_tab_1(buf);
+1: i = 0
+2: k = 0
+3: j = 0
+4: tab_1[j] = 0x2e2e2e2e2e2e2e6f <error: Cannot access memory at address 0x2e2e2e2e2e2e2e6f>
+5: tab_1[j][k] = <error: Cannot access memory at address 0x2e2e2e2e2e2e2e6f>
+6: buf[i] = 111 'o'
+37		while (buf[i])
+1: i = 0
+2: k = 0
+3: j = 0
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+6: buf[i] = 111 'o'
+39			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 0
+2: k = 0
+3: j = 0
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+6: buf[i] = 111 'o'
+40			while (buf[i] != '\n' || buf[i] != '\0')
+1: i = 0
+2: k = 0
+3: j = 0
+4: tab_1[j] = 0x555555559b30 ""
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 111 'o'
+42				tab_1[j][k] = buf[i];
+1: i = 0
+2: k = 0
+3: j = 0
+4: tab_1[j] = 0x555555559b30 ""
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 111 'o'
+43				k++;
+1: i = 0
+2: k = 0
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o"
+5: tab_1[j][k] = 111 'o'
+6: buf[i] = 111 'o'
+44				i++;
+1: i = 0
+2: k = 1
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o"
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 111 'o'
+40			while (buf[i] != '\n' || buf[i] != '\0')
+1: i = 1
+2: k = 1
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o"
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+42				tab_1[j][k] = buf[i];
+1: i = 1
+2: k = 1
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o"
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+43				k++;
+1: i = 1
+2: k = 1
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o."
+5: tab_1[j][k] = 46 '.'
+6: buf[i] = 46 '.'
+44				i++;
+1: i = 1
+2: k = 2
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+40			while (buf[i] != '\n' || buf[i] != '\0')
+1: i = 2
+2: k = 2
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+42				tab_1[j][k] = buf[i];
+1: i = 2
+2: k = 2
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+43				k++;
+1: i = 2
+2: k = 2
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o.."
+5: tab_1[j][k] = 46 '.'
+6: buf[i] = 46 '.'
+44				i++;
+1: i = 2
+2: k = 3
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o.."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+40			while (buf[i] != '\n' || buf[i] != '\0')
+1: i = 3
+2: k = 3
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o.."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+42				tab_1[j][k] = buf[i];
+1: i = 3
+2: k = 3
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o.."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+43				k++;
+1: i = 3
+2: k = 3
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o..."
+5: tab_1[j][k] = 46 '.'
+6: buf[i] = 46 '.'
+44				i++;
+1: i = 3
+2: k = 4
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o..."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+40			while (buf[i] != '\n' || buf[i] != '\0')
+1: i = 4
+2: k = 4
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o..."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+42				tab_1[j][k] = buf[i];
+1: i = 4
+2: k = 4
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o..."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+43				k++;
+1: i = 4
+2: k = 4
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o...."
+5: tab_1[j][k] = 46 '.'
+6: buf[i] = 46 '.'
+44				i++;
+1: i = 4
+2: k = 5
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o...."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+40			while (buf[i] != '\n' || buf[i] != '\0')
+1: i = 5
+2: k = 5
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o...."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+42				tab_1[j][k] = buf[i];
+1: i = 5
+2: k = 5
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o...."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+43				k++;
+1: i = 5
+2: k = 5
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o....."
+5: tab_1[j][k] = 46 '.'
+6: buf[i] = 46 '.'
+44				i++;
+1: i = 5
+2: k = 6
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o....."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+40			while (buf[i] != '\n' || buf[i] != '\0')
+1: i = 6
+2: k = 6
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o....."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+42				tab_1[j][k] = buf[i];
+1: i = 6
+2: k = 6
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o....."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+43				k++;
+1: i = 6
+2: k = 6
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o......"
+5: tab_1[j][k] = 46 '.'
+6: buf[i] = 46 '.'
+44				i++;
+1: i = 6
+2: k = 7
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o......"
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+40			while (buf[i] != '\n' || buf[i] != '\0')
+1: i = 7
+2: k = 7
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o......"
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+42				tab_1[j][k] = buf[i];
+1: i = 7
+2: k = 7
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o......"
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+43				k++;
+1: i = 7
+2: k = 7
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o......."
+5: tab_1[j][k] = 46 '.'
+6: buf[i] = 46 '.'
+44				i++;
+1: i = 7
+2: k = 8
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o......."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+40			while (buf[i] != '\n' || buf[i] != '\0')
+1: i = 8
+2: k = 8
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o......."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+42				tab_1[j][k] = buf[i];
+1: i = 8
+2: k = 8
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o......."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+43				k++;
+1: i = 8
+2: k = 8
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........"
+5: tab_1[j][k] = 46 '.'
+6: buf[i] = 46 '.'
+44				i++;
+1: i = 8
+2: k = 9
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........"
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+40			while (buf[i] != '\n' || buf[i] != '\0')
+1: i = 9
+2: k = 9
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........"
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 111 'o'
+42				tab_1[j][k] = buf[i];
+1: i = 9
+2: k = 9
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........"
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 111 'o'
+43				k++;
+1: i = 9
+2: k = 9
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o"
+5: tab_1[j][k] = 111 'o'
+6: buf[i] = 111 'o'
+44				i++;
+1: i = 9
+2: k = 10
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o"
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 111 'o'
+40			while (buf[i] != '\n' || buf[i] != '\0')
+1: i = 10
+2: k = 10
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o"
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 10 '\n'
+42				tab_1[j][k] = buf[i];
+1: i = 10
+2: k = 10
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o"
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 10 '\n'
+43				k++;
+1: i = 10
+2: k = 10
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o\n"
+5: tab_1[j][k] = 10 '\n'
+6: buf[i] = 10 '\n'
+44				i++;
+1: i = 10
+2: k = 11
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o\n"
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 10 '\n'
+40			while (buf[i] != '\n' || buf[i] != '\0')
+1: i = 11
+2: k = 11
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o\n"
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+42				tab_1[j][k] = buf[i];
+1: i = 11
+2: k = 11
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o\n"
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+43				k++;
+1: i = 11
+2: k = 11
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o\n."
+5: tab_1[j][k] = 46 '.'
+6: buf[i] = 46 '.'
+44				i++;
+1: i = 11
+2: k = 12
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o\n."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+40			while (buf[i] != '\n' || buf[i] != '\0')
+1: i = 12
+2: k = 12
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o\n."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+42				tab_1[j][k] = buf[i];
+1: i = 12
+2: k = 12
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o\n."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+43				k++;
+1: i = 12
+2: k = 12
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o\n.."
+5: tab_1[j][k] = 46 '.'
+6: buf[i] = 46 '.'
+44				i++;
+1: i = 12
+2: k = 13
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o\n.."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+40			while (buf[i] != '\n' || buf[i] != '\0')
+1: i = 13
+2: k = 13
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o\n.."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+42				tab_1[j][k] = buf[i];
+1: i = 13
+2: k = 13
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o\n.."
+5: tab_1[j][k] = 0 '\000'
+6: buf[i] = 46 '.'
+43				k++;
+1: i = 13
+2: k = 13
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o\n..."
+5: tab_1[j][k] = 46 '.'
+6: buf[i] = 46 '.'
+<<<<<<< HEAD
+Breakpoint 1 at 0x13ed: file tab.c, line 33.
+Starting program: /home/nchaille/rendu/BSQ/bsq_debug 
+=======
+Breakpoint 1 at 0x1c5d: file add_values.c, line 49.
+Starting program: /home/kcacciab/Documents/Workspace/C_BSQ/C_BSQ_V1/bsq_debug 
+>>>>>>> bed3ae4a6cdc65cf4a0f6bd9ba2b985e8b6e2406
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+<<<<<<< HEAD
+Breakpoint 1, ft_tab_1 (buf=0x5555555596b0 "o........o\n...o....o.\no..o......\n..o..o.o..\n.o........\n.o.o.o.o..\n.o.....o..\n...o......\n...o.o..oo\n.o..o..oo.") at tab.c:33
+33		i = 0;
+1: i = 21845
+2: k = 21845
+3: j = 1431650368
+4: tab_1[j] = <error: Cannot access memory at address 0x5557ffff98b0>
+5: tab_1[j][k] = <error: Cannot access memory at address 0x5557ffff98b0>
+34		k = 0;
+1: i = 0
+2: k = 21845
+3: j = 1431650368
+4: tab_1[j] = <error: Cannot access memory at address 0x5557ffff98b0>
+5: tab_1[j][k] = <error: Cannot access memory at address 0x5557ffff98b0>
+35		j = 0;
+1: i = 0
+2: k = 0
+3: j = 1431650368
+4: tab_1[j] = <error: Cannot access memory at address 0x5557ffff98b0>
+5: tab_1[j][k] = <error: Cannot access memory at address 0x5557ffff98b0>
+36		tab_1 = ft_malloc_tab_1(buf);
+1: i = 0
+2: k = 0
+3: j = 0
+4: tab_1[j] = 0x2e2e2e2e2e2e2e6f <error: Cannot access memory at address 0x2e2e2e2e2e2e2e6f>
+5: tab_1[j][k] = <error: Cannot access memory at address 0x2e2e2e2e2e2e2e6f>
+37		if (tab_1 == NULL)
+1: i = 0
+2: k = 0
+3: j = 0
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+39		while (buf[i])
+1: i = 0
+2: k = 0
+3: j = 0
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+41			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 0
+2: k = 0
+3: j = 0
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 0
+2: k = 0
+3: j = 0
+4: tab_1[j] = 0x555555559b30 ""
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 0
+2: k = 0
+3: j = 0
+4: tab_1[j] = 0x555555559b30 ""
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 0
+2: k = 0
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 0
+2: k = 1
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 1
+2: k = 1
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 1
+2: k = 1
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 1
+2: k = 1
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 1
+2: k = 2
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 2
+2: k = 2
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 2
+2: k = 2
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 2
+2: k = 2
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o.."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 2
+2: k = 3
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o.."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 3
+2: k = 3
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o.."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 3
+2: k = 3
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o.."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 3
+2: k = 3
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o..."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 3
+2: k = 4
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o..."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 4
+2: k = 4
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o..."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 4
+2: k = 4
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o..."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 4
+2: k = 4
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o...."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 4
+2: k = 5
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o...."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 5
+2: k = 5
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o...."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 5
+2: k = 5
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o...."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 5
+2: k = 5
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o....."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 5
+2: k = 6
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o....."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 6
+2: k = 6
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o....."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 6
+2: k = 6
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o....."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 6
+2: k = 6
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o......"
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 6
+2: k = 7
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o......"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 7
+2: k = 7
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o......"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 7
+2: k = 7
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o......"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 7
+2: k = 7
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o......."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 7
+2: k = 8
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o......."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 8
+2: k = 8
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o......."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 8
+2: k = 8
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o......."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 8
+2: k = 8
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........"
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 8
+2: k = 9
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 9
+2: k = 9
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 9
+2: k = 9
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 9
+2: k = 9
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 9
+2: k = 10
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 10
+2: k = 10
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o"
+5: tab_1[j][k] = 0 '\000'
+48			tab_1[j][k] = '\0';
+1: i = 10
+2: k = 10
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o"
+5: tab_1[j][k] = 0 '\000'
+49			k = 0;
+1: i = 10
+2: k = 10
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o"
+5: tab_1[j][k] = 0 '\000'
+50			i++;
+1: i = 10
+2: k = 0
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o"
+5: tab_1[j][k] = 111 'o'
+51			j++;
+1: i = 11
+2: k = 0
+3: j = 0
+4: tab_1[j] = 0x555555559b30 "o........o"
+5: tab_1[j][k] = 111 'o'
+39		while (buf[i])
+1: i = 11
+2: k = 0
+3: j = 1
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+41			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 11
+2: k = 0
+3: j = 1
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 11
+2: k = 0
+3: j = 1
+4: tab_1[j] = 0x555555559b50 ""
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 11
+2: k = 0
+3: j = 1
+4: tab_1[j] = 0x555555559b50 ""
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 11
+2: k = 0
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 11
+2: k = 1
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 12
+2: k = 1
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 12
+2: k = 1
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 12
+2: k = 1
+3: j = 1
+4: tab_1[j] = 0x555555559b50 ".."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 12
+2: k = 2
+3: j = 1
+4: tab_1[j] = 0x555555559b50 ".."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 13
+2: k = 2
+3: j = 1
+4: tab_1[j] = 0x555555559b50 ".."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 13
+2: k = 2
+3: j = 1
+4: tab_1[j] = 0x555555559b50 ".."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 13
+2: k = 2
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "..."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 13
+2: k = 3
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "..."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 14
+2: k = 3
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "..."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 14
+2: k = 3
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "..."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 14
+2: k = 3
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 14
+2: k = 4
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 15
+2: k = 4
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 15
+2: k = 4
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 15
+2: k = 4
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 15
+2: k = 5
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 16
+2: k = 5
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 16
+2: k = 5
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 16
+2: k = 5
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o.."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 16
+2: k = 6
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o.."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 17
+2: k = 6
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o.."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 17
+2: k = 6
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o.."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 17
+2: k = 6
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o..."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 17
+2: k = 7
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o..."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 18
+2: k = 7
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o..."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 18
+2: k = 7
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o..."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 18
+2: k = 7
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o...."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 18
+2: k = 8
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o...."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 19
+2: k = 8
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o...."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 19
+2: k = 8
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o...."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 19
+2: k = 8
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o....o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 19
+2: k = 9
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o....o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 20
+2: k = 9
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o....o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 20
+2: k = 9
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o....o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 20
+2: k = 9
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o....o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 20
+2: k = 10
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o....o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 21
+2: k = 10
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o....o."
+5: tab_1[j][k] = 0 '\000'
+48			tab_1[j][k] = '\0';
+1: i = 21
+2: k = 10
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o....o."
+5: tab_1[j][k] = 0 '\000'
+49			k = 0;
+1: i = 21
+2: k = 10
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o....o."
+5: tab_1[j][k] = 0 '\000'
+50			i++;
+1: i = 21
+2: k = 0
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o....o."
+5: tab_1[j][k] = 46 '.'
+51			j++;
+1: i = 22
+2: k = 0
+3: j = 1
+4: tab_1[j] = 0x555555559b50 "...o....o."
+5: tab_1[j][k] = 46 '.'
+39		while (buf[i])
+1: i = 22
+2: k = 0
+3: j = 2
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+41			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 22
+2: k = 0
+3: j = 2
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 22
+2: k = 0
+3: j = 2
+4: tab_1[j] = 0x555555559b70 ""
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 22
+2: k = 0
+3: j = 2
+4: tab_1[j] = 0x555555559b70 ""
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 22
+2: k = 0
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 22
+2: k = 1
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 23
+2: k = 1
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 23
+2: k = 1
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 23
+2: k = 1
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 23
+2: k = 2
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 24
+2: k = 2
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 24
+2: k = 2
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 24
+2: k = 2
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o.."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 24
+2: k = 3
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o.."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 25
+2: k = 3
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o.."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 25
+2: k = 3
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o.."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 25
+2: k = 3
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 25
+2: k = 4
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 26
+2: k = 4
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 26
+2: k = 4
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 26
+2: k = 4
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 26
+2: k = 5
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 27
+2: k = 5
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 27
+2: k = 5
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 27
+2: k = 5
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o.."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 27
+2: k = 6
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o.."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 28
+2: k = 6
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o.."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 28
+2: k = 6
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o.."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 28
+2: k = 6
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o..."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 28
+2: k = 7
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o..."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 29
+2: k = 7
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o..."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 29
+2: k = 7
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o..."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 29
+2: k = 7
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o...."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 29
+2: k = 8
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o...."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 30
+2: k = 8
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o...."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 30
+2: k = 8
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o...."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 30
+2: k = 8
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o....."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 30
+2: k = 9
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o....."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 31
+2: k = 9
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o....."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 31
+2: k = 9
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o....."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 31
+2: k = 9
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o......"
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 31
+2: k = 10
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o......"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 32
+2: k = 10
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o......"
+5: tab_1[j][k] = 0 '\000'
+48			tab_1[j][k] = '\0';
+1: i = 32
+2: k = 10
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o......"
+5: tab_1[j][k] = 0 '\000'
+49			k = 0;
+1: i = 32
+2: k = 10
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o......"
+5: tab_1[j][k] = 0 '\000'
+50			i++;
+1: i = 32
+2: k = 0
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o......"
+5: tab_1[j][k] = 111 'o'
+51			j++;
+1: i = 33
+2: k = 0
+3: j = 2
+4: tab_1[j] = 0x555555559b70 "o..o......"
+5: tab_1[j][k] = 111 'o'
+39		while (buf[i])
+1: i = 33
+2: k = 0
+3: j = 3
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+41			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 33
+2: k = 0
+3: j = 3
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 33
+2: k = 0
+3: j = 3
+4: tab_1[j] = 0x555555559b90 ""
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 33
+2: k = 0
+3: j = 3
+4: tab_1[j] = 0x555555559b90 ""
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 33
+2: k = 0
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 33
+2: k = 1
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 34
+2: k = 1
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 34
+2: k = 1
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 34
+2: k = 1
+3: j = 3
+4: tab_1[j] = 0x555555559b90 ".."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 34
+2: k = 2
+3: j = 3
+4: tab_1[j] = 0x555555559b90 ".."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 35
+2: k = 2
+3: j = 3
+4: tab_1[j] = 0x555555559b90 ".."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 35
+2: k = 2
+3: j = 3
+4: tab_1[j] = 0x555555559b90 ".."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 35
+2: k = 2
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 35
+2: k = 3
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 36
+2: k = 3
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 36
+2: k = 3
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 36
+2: k = 3
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 36
+2: k = 4
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 37
+2: k = 4
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 37
+2: k = 4
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 37
+2: k = 4
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o.."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 37
+2: k = 5
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o.."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 38
+2: k = 5
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o.."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 38
+2: k = 5
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o.."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 38
+2: k = 5
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 38
+2: k = 6
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 39
+2: k = 6
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 39
+2: k = 6
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 39
+2: k = 6
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 39
+2: k = 7
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 40
+2: k = 7
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 40
+2: k = 7
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 40
+2: k = 7
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o.o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 40
+2: k = 8
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o.o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 41
+2: k = 8
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o.o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 41
+2: k = 8
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o.o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 41
+2: k = 8
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o.o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 41
+2: k = 9
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o.o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 42
+2: k = 9
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o.o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 42
+2: k = 9
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o.o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 42
+2: k = 9
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o.o.."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 42
+2: k = 10
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o.o.."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 43
+2: k = 10
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o.o.."
+5: tab_1[j][k] = 0 '\000'
+48			tab_1[j][k] = '\0';
+1: i = 43
+2: k = 10
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o.o.."
+5: tab_1[j][k] = 0 '\000'
+49			k = 0;
+1: i = 43
+2: k = 10
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o.o.."
+5: tab_1[j][k] = 0 '\000'
+50			i++;
+1: i = 43
+2: k = 0
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o.o.."
+5: tab_1[j][k] = 46 '.'
+51			j++;
+1: i = 44
+2: k = 0
+3: j = 3
+4: tab_1[j] = 0x555555559b90 "..o..o.o.."
+5: tab_1[j][k] = 46 '.'
+39		while (buf[i])
+1: i = 44
+2: k = 0
+3: j = 4
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+41			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 44
+2: k = 0
+3: j = 4
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 44
+2: k = 0
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ""
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 44
+2: k = 0
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ""
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 44
+2: k = 0
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 "."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 44
+2: k = 1
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 "."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 45
+2: k = 1
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 "."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 45
+2: k = 1
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 "."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 45
+2: k = 1
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 45
+2: k = 2
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 46
+2: k = 2
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 46
+2: k = 2
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 46
+2: k = 2
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 46
+2: k = 3
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 47
+2: k = 3
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 47
+2: k = 3
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 47
+2: k = 3
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o.."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 47
+2: k = 4
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o.."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 48
+2: k = 4
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o.."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 48
+2: k = 4
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o.."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 48
+2: k = 4
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o..."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 48
+2: k = 5
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o..."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 49
+2: k = 5
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o..."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 49
+2: k = 5
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o..."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 49
+2: k = 5
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o...."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 49
+2: k = 6
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o...."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 50
+2: k = 6
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o...."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 50
+2: k = 6
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o...."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 50
+2: k = 6
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o....."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 50
+2: k = 7
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o....."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 51
+2: k = 7
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o....."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 51
+2: k = 7
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o....."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 51
+2: k = 7
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o......"
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 51
+2: k = 8
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o......"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 52
+2: k = 8
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o......"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 52
+2: k = 8
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o......"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 52
+2: k = 8
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o......."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 52
+2: k = 9
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o......."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 53
+2: k = 9
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o......."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 53
+2: k = 9
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o......."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 53
+2: k = 9
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o........"
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 53
+2: k = 10
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o........"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 54
+2: k = 10
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o........"
+5: tab_1[j][k] = 0 '\000'
+48			tab_1[j][k] = '\0';
+1: i = 54
+2: k = 10
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o........"
+5: tab_1[j][k] = 0 '\000'
+49			k = 0;
+1: i = 54
+2: k = 10
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o........"
+5: tab_1[j][k] = 0 '\000'
+50			i++;
+1: i = 54
+2: k = 0
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o........"
+5: tab_1[j][k] = 46 '.'
+51			j++;
+1: i = 55
+2: k = 0
+3: j = 4
+4: tab_1[j] = 0x555555559bb0 ".o........"
+5: tab_1[j][k] = 46 '.'
+39		while (buf[i])
+1: i = 55
+2: k = 0
+3: j = 5
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+41			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 55
+2: k = 0
+3: j = 5
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 55
+2: k = 0
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ""
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 55
+2: k = 0
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ""
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 55
+2: k = 0
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 "."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 55
+2: k = 1
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 "."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 56
+2: k = 1
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 "."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 56
+2: k = 1
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 "."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 56
+2: k = 1
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 56
+2: k = 2
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 57
+2: k = 2
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 57
+2: k = 2
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 57
+2: k = 2
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 57
+2: k = 3
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 58
+2: k = 3
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 58
+2: k = 3
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 58
+2: k = 3
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 58
+2: k = 4
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 59
+2: k = 4
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 59
+2: k = 4
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 59
+2: k = 4
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 59
+2: k = 5
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 60
+2: k = 5
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 60
+2: k = 5
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 60
+2: k = 5
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 60
+2: k = 6
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 61
+2: k = 6
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 61
+2: k = 6
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 61
+2: k = 6
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 61
+2: k = 7
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 62
+2: k = 7
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 62
+2: k = 7
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 62
+2: k = 7
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o.o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 62
+2: k = 8
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o.o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 63
+2: k = 8
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o.o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 63
+2: k = 8
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o.o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 63
+2: k = 8
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o.o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 63
+2: k = 9
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o.o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 64
+2: k = 9
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o.o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 64
+2: k = 9
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o.o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 64
+2: k = 9
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o.o.."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 64
+2: k = 10
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o.o.."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 65
+2: k = 10
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o.o.."
+5: tab_1[j][k] = 0 '\000'
+48			tab_1[j][k] = '\0';
+1: i = 65
+2: k = 10
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o.o.."
+5: tab_1[j][k] = 0 '\000'
+49			k = 0;
+1: i = 65
+2: k = 10
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o.o.."
+5: tab_1[j][k] = 0 '\000'
+50			i++;
+1: i = 65
+2: k = 0
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o.o.."
+5: tab_1[j][k] = 46 '.'
+51			j++;
+1: i = 66
+2: k = 0
+3: j = 5
+4: tab_1[j] = 0x555555559bd0 ".o.o.o.o.."
+5: tab_1[j][k] = 46 '.'
+39		while (buf[i])
+1: i = 66
+2: k = 0
+3: j = 6
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+41			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 66
+2: k = 0
+3: j = 6
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 66
+2: k = 0
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ""
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 66
+2: k = 0
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ""
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 66
+2: k = 0
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 "."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 66
+2: k = 1
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 "."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 67
+2: k = 1
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 "."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 67
+2: k = 1
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 "."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 67
+2: k = 1
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 67
+2: k = 2
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 68
+2: k = 2
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 68
+2: k = 2
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 68
+2: k = 2
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 68
+2: k = 3
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 69
+2: k = 3
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 69
+2: k = 3
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 69
+2: k = 3
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 69
+2: k = 4
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 70
+2: k = 4
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 70
+2: k = 4
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 70
+2: k = 4
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o..."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 70
+2: k = 5
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o..."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 71
+2: k = 5
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o..."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 71
+2: k = 5
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o..."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 71
+2: k = 5
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o...."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 71
+2: k = 6
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o...."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 72
+2: k = 6
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o...."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 72
+2: k = 6
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o...."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 72
+2: k = 6
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o....."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 72
+2: k = 7
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o....."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 73
+2: k = 7
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o....."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 73
+2: k = 7
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o....."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 73
+2: k = 7
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.....o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 73
+2: k = 8
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.....o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 74
+2: k = 8
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.....o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 74
+2: k = 8
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.....o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 74
+2: k = 8
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.....o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 74
+2: k = 9
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.....o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 75
+2: k = 9
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.....o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 75
+2: k = 9
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.....o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 75
+2: k = 9
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.....o.."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 75
+2: k = 10
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.....o.."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 76
+2: k = 10
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.....o.."
+5: tab_1[j][k] = 0 '\000'
+48			tab_1[j][k] = '\0';
+1: i = 76
+2: k = 10
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.....o.."
+5: tab_1[j][k] = 0 '\000'
+49			k = 0;
+1: i = 76
+2: k = 10
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.....o.."
+5: tab_1[j][k] = 0 '\000'
+50			i++;
+1: i = 76
+2: k = 0
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.....o.."
+5: tab_1[j][k] = 46 '.'
+51			j++;
+1: i = 77
+2: k = 0
+3: j = 6
+4: tab_1[j] = 0x555555559bf0 ".o.....o.."
+5: tab_1[j][k] = 46 '.'
+39		while (buf[i])
+1: i = 77
+2: k = 0
+3: j = 7
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+41			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 77
+2: k = 0
+3: j = 7
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 77
+2: k = 0
+3: j = 7
+4: tab_1[j] = 0x555555559c10 ""
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 77
+2: k = 0
+3: j = 7
+4: tab_1[j] = 0x555555559c10 ""
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 77
+2: k = 0
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 77
+2: k = 1
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 78
+2: k = 1
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 78
+2: k = 1
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 78
+2: k = 1
+3: j = 7
+4: tab_1[j] = 0x555555559c10 ".."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 78
+2: k = 2
+3: j = 7
+4: tab_1[j] = 0x555555559c10 ".."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 79
+2: k = 2
+3: j = 7
+4: tab_1[j] = 0x555555559c10 ".."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 79
+2: k = 2
+3: j = 7
+4: tab_1[j] = 0x555555559c10 ".."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 79
+2: k = 2
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "..."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 79
+2: k = 3
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "..."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 80
+2: k = 3
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "..."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 80
+2: k = 3
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "..."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 80
+2: k = 3
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 80
+2: k = 4
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 81
+2: k = 4
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 81
+2: k = 4
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 81
+2: k = 4
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 81
+2: k = 5
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 82
+2: k = 5
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 82
+2: k = 5
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 82
+2: k = 5
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o.."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 82
+2: k = 6
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o.."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 83
+2: k = 6
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o.."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 83
+2: k = 6
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o.."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 83
+2: k = 6
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o..."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 83
+2: k = 7
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o..."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 84
+2: k = 7
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o..."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 84
+2: k = 7
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o..."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 84
+2: k = 7
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o...."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 84
+2: k = 8
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o...."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 85
+2: k = 8
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o...."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 85
+2: k = 8
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o...."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 85
+2: k = 8
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o....."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 85
+2: k = 9
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o....."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 86
+2: k = 9
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o....."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 86
+2: k = 9
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o....."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 86
+2: k = 9
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o......"
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 86
+2: k = 10
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o......"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 87
+2: k = 10
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o......"
+5: tab_1[j][k] = 0 '\000'
+48			tab_1[j][k] = '\0';
+1: i = 87
+2: k = 10
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o......"
+5: tab_1[j][k] = 0 '\000'
+49			k = 0;
+1: i = 87
+2: k = 10
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o......"
+5: tab_1[j][k] = 0 '\000'
+50			i++;
+1: i = 87
+2: k = 0
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o......"
+5: tab_1[j][k] = 46 '.'
+51			j++;
+1: i = 88
+2: k = 0
+3: j = 7
+4: tab_1[j] = 0x555555559c10 "...o......"
+5: tab_1[j][k] = 46 '.'
+39		while (buf[i])
+1: i = 88
+2: k = 0
+3: j = 8
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+41			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 88
+2: k = 0
+3: j = 8
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 88
+2: k = 0
+3: j = 8
+4: tab_1[j] = 0x555555559c30 ""
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 88
+2: k = 0
+3: j = 8
+4: tab_1[j] = 0x555555559c30 ""
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 88
+2: k = 0
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 88
+2: k = 1
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 89
+2: k = 1
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 89
+2: k = 1
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 89
+2: k = 1
+3: j = 8
+4: tab_1[j] = 0x555555559c30 ".."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 89
+2: k = 2
+3: j = 8
+4: tab_1[j] = 0x555555559c30 ".."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 90
+2: k = 2
+3: j = 8
+4: tab_1[j] = 0x555555559c30 ".."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 90
+2: k = 2
+3: j = 8
+4: tab_1[j] = 0x555555559c30 ".."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 90
+2: k = 2
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "..."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 90
+2: k = 3
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "..."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 91
+2: k = 3
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "..."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 91
+2: k = 3
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "..."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 91
+2: k = 3
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 91
+2: k = 4
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 92
+2: k = 4
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 92
+2: k = 4
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 92
+2: k = 4
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 92
+2: k = 5
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 93
+2: k = 5
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 93
+2: k = 5
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 93
+2: k = 5
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 93
+2: k = 6
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 94
+2: k = 6
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 94
+2: k = 6
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 94
+2: k = 6
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 94
+2: k = 7
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 95
+2: k = 7
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 95
+2: k = 7
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 95
+2: k = 7
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o.."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 95
+2: k = 8
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o.."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 96
+2: k = 8
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o.."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 96
+2: k = 8
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o.."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 96
+2: k = 8
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o..o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 96
+2: k = 9
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o..o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 97
+2: k = 9
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o..o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 97
+2: k = 9
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o..o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 97
+2: k = 9
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o..oo"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 97
+2: k = 10
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o..oo"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 98
+2: k = 10
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o..oo"
+5: tab_1[j][k] = 0 '\000'
+48			tab_1[j][k] = '\0';
+1: i = 98
+2: k = 10
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o..oo"
+5: tab_1[j][k] = 0 '\000'
+49			k = 0;
+1: i = 98
+2: k = 10
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o..oo"
+5: tab_1[j][k] = 0 '\000'
+50			i++;
+1: i = 98
+2: k = 0
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o..oo"
+5: tab_1[j][k] = 46 '.'
+51			j++;
+1: i = 99
+2: k = 0
+3: j = 8
+4: tab_1[j] = 0x555555559c30 "...o.o..oo"
+5: tab_1[j][k] = 46 '.'
+39		while (buf[i])
+1: i = 99
+2: k = 0
+3: j = 9
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+41			tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 99
+2: k = 0
+3: j = 9
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 99
+2: k = 0
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ""
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 99
+2: k = 0
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ""
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 99
+2: k = 0
+3: j = 9
+4: tab_1[j] = 0x555555559c50 "."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 99
+2: k = 1
+3: j = 9
+4: tab_1[j] = 0x555555559c50 "."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 100
+2: k = 1
+3: j = 9
+4: tab_1[j] = 0x555555559c50 "."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 100
+2: k = 1
+3: j = 9
+4: tab_1[j] = 0x555555559c50 "."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 100
+2: k = 1
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 100
+2: k = 2
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 101
+2: k = 2
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 101
+2: k = 2
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 101
+2: k = 2
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 101
+2: k = 3
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 102
+2: k = 3
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 102
+2: k = 3
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 102
+2: k = 3
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o.."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 102
+2: k = 4
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o.."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 103
+2: k = 4
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o.."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 103
+2: k = 4
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o.."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 103
+2: k = 4
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 103
+2: k = 5
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 104
+2: k = 5
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 104
+2: k = 5
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 104
+2: k = 5
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 104
+2: k = 6
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 105
+2: k = 6
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 105
+2: k = 6
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 105
+2: k = 6
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o.."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 105
+2: k = 7
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o.."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 106
+2: k = 7
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o.."
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 106
+2: k = 7
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o.."
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 106
+2: k = 7
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o..o"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 106
+2: k = 8
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o..o"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 107
+2: k = 8
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o..o"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 107
+2: k = 8
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o..o"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 107
+2: k = 8
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o..oo"
+5: tab_1[j][k] = 111 'o'
+46				i++;
+1: i = 107
+2: k = 9
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o..oo"
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 108
+2: k = 9
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o..oo"
+5: tab_1[j][k] = 0 '\000'
+44				tab_1[j][k] = buf[i];
+1: i = 108
+2: k = 9
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o..oo"
+5: tab_1[j][k] = 0 '\000'
+45				k++;
+1: i = 108
+2: k = 9
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o..oo."
+5: tab_1[j][k] = 46 '.'
+46				i++;
+1: i = 108
+2: k = 10
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o..oo."
+5: tab_1[j][k] = 0 '\000'
+42			while (buf[i] != '\n' && buf[i] != '\0')
+1: i = 109
+2: k = 10
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o..oo."
+5: tab_1[j][k] = 0 '\000'
+48			tab_1[j][k] = '\0';
+1: i = 109
+2: k = 10
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o..oo."
+5: tab_1[j][k] = 0 '\000'
+49			k = 0;
+1: i = 109
+2: k = 10
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o..oo."
+5: tab_1[j][k] = 0 '\000'
+50			i++;
+1: i = 109
+2: k = 0
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o..oo."
+5: tab_1[j][k] = 46 '.'
+51			j++;
+1: i = 110
+2: k = 0
+3: j = 9
+4: tab_1[j] = 0x555555559c50 ".o..o..oo."
+5: tab_1[j][k] = 46 '.'
+39		while (buf[i])
+1: i = 110
+2: k = 0
+3: j = 10
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+53		i = 0;
+1: i = 110
+2: k = 0
+3: j = 10
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+54		tab_1[j] = ft_malloc_lines_tab_1(buf);
+1: i = 0
+2: k = 0
+3: j = 10
+4: tab_1[j] = 0x0
+5: tab_1[j][k] = <error: Cannot access memory at address 0x0>
+55		while (i < ft_count_colones(buf))
+1: i = 0
+2: k = 0
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+57			tab_1[j][k] = '\0';
+1: i = 0
+2: k = 0
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+58			k++;
+1: i = 0
+2: k = 0
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+59			i++;
+1: i = 0
+2: k = 1
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+55		while (i < ft_count_colones(buf))
+1: i = 1
+2: k = 1
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+57			tab_1[j][k] = '\0';
+1: i = 1
+2: k = 1
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+58			k++;
+1: i = 1
+2: k = 1
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+59			i++;
+1: i = 1
+2: k = 2
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+55		while (i < ft_count_colones(buf))
+1: i = 2
+2: k = 2
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+57			tab_1[j][k] = '\0';
+1: i = 2
+2: k = 2
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+58			k++;
+1: i = 2
+2: k = 2
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+59			i++;
+1: i = 2
+2: k = 3
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+55		while (i < ft_count_colones(buf))
+1: i = 3
+2: k = 3
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+57			tab_1[j][k] = '\0';
+1: i = 3
+2: k = 3
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+58			k++;
+1: i = 3
+2: k = 3
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+59			i++;
+1: i = 3
+2: k = 4
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+55		while (i < ft_count_colones(buf))
+1: i = 4
+2: k = 4
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+57			tab_1[j][k] = '\0';
+1: i = 4
+2: k = 4
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+58			k++;
+1: i = 4
+2: k = 4
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+59			i++;
+1: i = 4
+2: k = 5
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+55		while (i < ft_count_colones(buf))
+1: i = 5
+2: k = 5
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+57			tab_1[j][k] = '\0';
+1: i = 5
+2: k = 5
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+58			k++;
+1: i = 5
+2: k = 5
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+59			i++;
+1: i = 5
+2: k = 6
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+55		while (i < ft_count_colones(buf))
+1: i = 6
+2: k = 6
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+57			tab_1[j][k] = '\0';
+1: i = 6
+2: k = 6
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+58			k++;
+1: i = 6
+2: k = 6
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+59			i++;
+1: i = 6
+2: k = 7
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+55		while (i < ft_count_colones(buf))
+1: i = 7
+2: k = 7
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+57			tab_1[j][k] = '\0';
+1: i = 7
+2: k = 7
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+58			k++;
+1: i = 7
+2: k = 7
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+59			i++;
+1: i = 7
+2: k = 8
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+55		while (i < ft_count_colones(buf))
+1: i = 8
+2: k = 8
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+57			tab_1[j][k] = '\0';
+1: i = 8
+2: k = 8
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+58			k++;
+1: i = 8
+2: k = 8
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+59			i++;
+1: i = 8
+2: k = 9
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+55		while (i < ft_count_colones(buf))
+1: i = 9
+2: k = 9
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+57			tab_1[j][k] = '\0';
+1: i = 9
+2: k = 9
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+58			k++;
+1: i = 9
+2: k = 9
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+59			i++;
+1: i = 9
+2: k = 10
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+55		while (i < ft_count_colones(buf))
+1: i = 10
+2: k = 10
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+61		return (tab_1);
+1: i = 10
+2: k = 10
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+62	}
+1: i = 10
+2: k = 10
+3: j = 10
+4: tab_1[j] = 0x555555559c70 ""
+5: tab_1[j][k] = 0 '\000'
+main (argc=1, argv=0x7fffffffe058) at main.c:56
+56		tabs.tab_char = ft_tab_1(buf);
+57		if (tabs.tab_char == NULL)
+59		i = 0;
+60		while (tabs.tab_char[i])
+62			ft_putstr(tabs.tab_char[i]);
+63			ft_putstr("\n");
+64			i++;
+60		while (tabs.tab_char[i])
+62			ft_putstr(tabs.tab_char[i]);
+63			ft_putstr("\n");
+64			i++;
+60		while (tabs.tab_char[i])
+62			ft_putstr(tabs.tab_char[i]);
+63			ft_putstr("\n");
+64			i++;
+60		while (tabs.tab_char[i])
+62			ft_putstr(tabs.tab_char[i]);
+63			ft_putstr("\n");
+64			i++;
+60		while (tabs.tab_char[i])
+62			ft_putstr(tabs.tab_char[i]);
+63			ft_putstr("\n");
+64			i++;
+60		while (tabs.tab_char[i])
+62			ft_putstr(tabs.tab_char[i]);
+63			ft_putstr("\n");
+64			i++;
+60		while (tabs.tab_char[i])
+62			ft_putstr(tabs.tab_char[i]);
+63			ft_putstr("\n");
+64			i++;
+60		while (tabs.tab_char[i])
+62			ft_putstr(tabs.tab_char[i]);
+63			ft_putstr("\n");
+64			i++;
+60		while (tabs.tab_char[i])
+62			ft_putstr(tabs.tab_char[i]);
+63			ft_putstr("\n");
+64			i++;
+60		while (tabs.tab_char[i])
+62			ft_putstr(tabs.tab_char[i]);
+63			ft_putstr("\n");
+64			i++;
+60		while (tabs.tab_char[i])
+62			ft_putstr(tabs.tab_char[i]);
+63			ft_putstr("\n");
+64			i++;
+60		while (tabs.tab_char[i])
+62			ft_putstr(tabs.tab_char[i]);
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00005555555557f2 in ft_putstr (str=0x21 <error: Cannot access memory at address 0x21>) at utils/ft_putstr.c:25
+25		while (str[i] != '\0')
+=======
+Breakpoint 1, seek (tabs=..., y=0, x=0, size_y=9, size_x=10, dist=1) at add_values.c:49
+49		test = 0;
+$1 = 805306368
+1: i = 805306368
+2: j = 1431672496
+3: test = 21845
+4: tabs.tab_int[y][x] = 0
+50		i = dist * -1;
+1: i = 805306368
+2: j = 1431672496
+3: test = 0
+4: tabs.tab_int[y][x] = 0
+51		j = dist * -1;
+1: i = -1
+2: j = 1431672496
+3: test = 0
+4: tabs.tab_int[y][x] = 0
+52		while (i <= dist && test == 0)
+1: i = -1
+2: j = -1
+3: test = 0
+4: tabs.tab_int[y][x] = 0
+54			while (j <= dist && test == 0)
+1: i = -1
+2: j = -1
+3: test = 0
+4: tabs.tab_int[y][x] = 0
+56				test_case(tabs, y + i, x + j, size_y, size_x);
+1: i = -1
+2: j = -1
+3: test = 0
+4: tabs.tab_int[y][x] = 0
+57				j++;
+1: i = -1
+2: j = -1
+3: test = 0
+4: tabs.tab_int[y][x] = 0
+Breakpoint 1 at 0x1dc0: file add_values.c, line 75.
+Starting program: /home/kcacciab/Documents/Workspace/C_BSQ/C_BSQ_V1/bsq_debug 
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, add_values (tabs=..., buf=0x5555555596b0 "o........o\n...o....o.\no..o......\n..o..o.o..\n.o........\n.o.o.o.o..\n.o.....o..\n...o......\n...o.o..oo\n.o..o..oo.") at add_values.c:75
+75		x = 0;
+1: x = 1431673968
+2: y = 21845
+Undefined command: "tabs.tab_char".  Try "help".
+3: tabs.tab_char[y][x] = <error: Cannot access memory at address 0x555555584578>
+4: tabs.tab_int[y][x] = <error: Cannot access memory at address 0x555555584718>
+76		y = 0;
+1: x = 0
+2: y = 21845
+3: tabs.tab_char[y][x] = <error: Cannot access memory at address 0x555555584578>
+4: tabs.tab_int[y][x] = <error: Cannot access memory at address 0x555555584718>
+77		while (y < ft_count_lines(buf))
+1: x = 0
+2: y = 0
+3: tabs.tab_char[y][x] = 111 'o'
+4: tabs.tab_int[y][x] = 0
+79			while (tabs.tab_char[y][x])
+1: x = 0
+2: y = 0
+3: tabs.tab_char[y][x] = 111 'o'
+4: tabs.tab_int[y][x] = 0
+81				seek(tabs, y, x, ft_count_lines(buf), ft_count_colones(buf), 1);
+1: x = 0
+2: y = 0
+3: tabs.tab_char[y][x] = 111 'o'
+4: tabs.tab_int[y][x] = 0
+82				x++;
+1: x = 0
+2: y = 0
+3: tabs.tab_char[y][x] = 111 'o'
+4: tabs.tab_int[y][x] = 0
+79			while (tabs.tab_char[y][x])
+1: x = 1
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+81				seek(tabs, y, x, ft_count_lines(buf), ft_count_colones(buf), 1);
+1: x = 1
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+82				x++;
+1: x = 1
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+79			while (tabs.tab_char[y][x])
+1: x = 2
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+81				seek(tabs, y, x, ft_count_lines(buf), ft_count_colones(buf), 1);
+1: x = 2
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+82				x++;
+1: x = 2
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+79			while (tabs.tab_char[y][x])
+1: x = 3
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+81				seek(tabs, y, x, ft_count_lines(buf), ft_count_colones(buf), 1);
+1: x = 3
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+82				x++;
+1: x = 3
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+79			while (tabs.tab_char[y][x])
+1: x = 4
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+81				seek(tabs, y, x, ft_count_lines(buf), ft_count_colones(buf), 1);
+1: x = 4
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+82				x++;
+1: x = 4
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+79			while (tabs.tab_char[y][x])
+1: x = 5
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+81				seek(tabs, y, x, ft_count_lines(buf), ft_count_colones(buf), 1);
+1: x = 5
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+82				x++;
+1: x = 5
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+79			while (tabs.tab_char[y][x])
+1: x = 6
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+81				seek(tabs, y, x, ft_count_lines(buf), ft_count_colones(buf), 1);
+1: x = 6
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+82				x++;
+1: x = 6
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+79			while (tabs.tab_char[y][x])
+1: x = 7
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+81				seek(tabs, y, x, ft_count_lines(buf), ft_count_colones(buf), 1);
+1: x = 7
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+82				x++;
+1: x = 7
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+79			while (tabs.tab_char[y][x])
+1: x = 8
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+81				seek(tabs, y, x, ft_count_lines(buf), ft_count_colones(buf), 1);
+1: x = 8
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+82				x++;
+1: x = 8
+2: y = 0
+3: tabs.tab_char[y][x] = 46 '.'
+4: tabs.tab_int[y][x] = 0
+79			while (tabs.tab_char[y][x])
+1: x = 9
+2: y = 0
+3: tabs.tab_char[y][x] = 111 'o'
+4: tabs.tab_int[y][x] = 0
+81				seek(tabs, y, x, ft_count_lines(buf), ft_count_colones(buf), 1);
+1: x = 9
+2: y = 0
+3: tabs.tab_char[y][x] = 111 'o'
+4: tabs.tab_int[y][x] = 0
+82				x++;
+1: x = 9
+2: y = 0
+3: tabs.tab_char[y][x] = 111 'o'
+4: tabs.tab_int[y][x] = 0
+79			while (tabs.tab_char[y][x])
+1: x = 10
+2: y = 0
+3: tabs.tab_char[y][x] = 0 '\000'
+4: tabs.tab_int[y][x] = -1
+84			y++;
+1: x = 10
+2: y = 0
+3: tabs.tab_char[y][x] = 0 '\000'
+4: tabs.tab_int[y][x] = -1
+77		while (y < ft_count_lines(buf))
+1: x = 10
+2: y = 1
+3: tabs.tab_char[y][x] = 0 '\000'
+4: tabs.tab_int[y][x] = -1
+79			while (tabs.tab_char[y][x])
+1: x = 10
+2: y = 1
+3: tabs.tab_char[y][x] = 0 '\000'
+4: tabs.tab_int[y][x] = -1
+84			y++;
+1: x = 10
+2: y = 1
+3: tabs.tab_char[y][x] = 0 '\000'
+4: tabs.tab_int[y][x] = -1
+77		while (y < ft_count_lines(buf))
+1: x = 10
+2: y = 2
+3: tabs.tab_char[y][x] = 0 '\000'
+4: tabs.tab_int[y][x] = -1
+79			while (tabs.tab_char[y][x])
+1: x = 10
+2: y = 2
+3: tabs.tab_char[y][x] = 0 '\000'
+4: tabs.tab_int[y][x] = -1
+84			y++;
+1: x = 10
+2: y = 2
+3: tabs.tab_char[y][x] = 0 '\000'
+4: tabs.tab_int[y][x] = -1
+77		while (y < ft_count_lines(buf))
+1: x = 10
+2: y = 3
+3: tabs.tab_char[y][x] = 0 '\000'
+4: tabs.tab_int[y][x] = -1
+Starting program: /home/kcacciab/Documents/Workspace/C_BSQ/C_BSQ_V1/bsq_debug 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, add_values (tabs=..., buf=0x5555555596b0 "o........o\n...o....o.\no..o......\n..o..o.o..\n.o........\n.o.o.o.o..\n.o.....o..\n...o......\n...o.o..oo\n.o..o..oo.") at add_values.c:75
+75		x = 0;
+1: x = 1431673968
+2: y = 21845
+3: tabs.tab_char[y][x] = <error: Cannot access memory at address 0x555555584578>
+4: tabs.tab_int[y][x] = <error: Cannot access memory at address 0x555555584718>
+>>>>>>> bed3ae4a6cdc65cf4a0f6bd9ba2b985e8b6e2406
+Program not restarted.
+Breakpoint 2 at 0x555555555a46: file make_square.c, line 54.
+Starting program: /home/kcacciab/Documents/Workspace/C_BSQ/C_BSQ_V1/bsq_debug logging
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 2, quadruple_center_test (y=2, x=2, size=2, tabs=...) at make_square.c:54
+54		if (tabs.tab_int[y][x + 1] == size)
+1: y = 2
+2: x = 2
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 46 '.'
+56			if (tabs.tab_int[y + 1][x + 1] == size)
+1: y = 2
+2: x = 2
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 46 '.'
+58				if (tabs.tab_int[y + 1][x] == size)
+1: y = 2
+2: x = 2
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 46 '.'
+60					square_replace(y, x, size, tabs);
+1: y = 2
+2: x = 2
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 46 '.'
+61					square_replace(y, x + 1, size, tabs);
+1: y = 2
+2: x = 2
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+62					square_replace(y + 1, x + 1, size, tabs);
+1: y = 2
+2: x = 2
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+63					square_replace(y + 1, x, size, tabs);
+1: y = 2
+2: x = 2
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+77	}
+1: y = 2
+2: x = 2
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+replace_tab (tabs=..., sc=..., lines=9) at make_square.c:94
+94				x++;
+88			while (tabs.tab_char[y][x])
+90				if (tabs.tab_int[y][x] == sc.size)
+92					quadruple_center_test(y, x, sc.size, tabs);
+
+Breakpoint 2, quadruple_center_test (y=2, x=3, size=2, tabs=...) at make_square.c:54
+54		if (tabs.tab_int[y][x + 1] == size)
+1: y = 2
+2: x = 3
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+67		else 	if (tabs.tab_int[y][x + 1] != size)
+1: y = 2
+2: x = 3
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+69			if (tabs.tab_int[y + 1][x + 1] != size)
+1: y = 2
+2: x = 3
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+77	}
+1: y = 2
+2: x = 3
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+replace_tab (tabs=..., sc=..., lines=9) at make_square.c:94
+94				x++;
+88			while (tabs.tab_char[y][x])
+90				if (tabs.tab_int[y][x] == sc.size)
+94				x++;
+88			while (tabs.tab_char[y][x])
+90				if (tabs.tab_int[y][x] == sc.size)
+94				x++;
+88			while (tabs.tab_char[y][x])
+90				if (tabs.tab_int[y][x] == sc.size)
+94				x++;
+88			while (tabs.tab_char[y][x])
+90				if (tabs.tab_int[y][x] == sc.size)
+94				x++;
+88			while (tabs.tab_char[y][x])
+90				if (tabs.tab_int[y][x] == sc.size)
+94				x++;
+88			while (tabs.tab_char[y][x])
+90				if (tabs.tab_int[y][x] == sc.size)
+94				x++;
+88			while (tabs.tab_char[y][x])
+96			x = 0;
+97			y++;
+86		while (y <= lines)
+88			while (tabs.tab_char[y][x])
+90				if (tabs.tab_int[y][x] == sc.size)
+94				x++;
+88			while (tabs.tab_char[y][x])
+90				if (tabs.tab_int[y][x] == sc.size)
+94				x++;
+88			while (tabs.tab_char[y][x])
+90				if (tabs.tab_int[y][x] == sc.size)
+92					quadruple_center_test(y, x, sc.size, tabs);
+
+Breakpoint 2, quadruple_center_test (y=3, x=2, size=2, tabs=...) at make_square.c:54
+54		if (tabs.tab_int[y][x + 1] == size)
+1: y = 3
+2: x = 2
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+56			if (tabs.tab_int[y + 1][x + 1] == size)
+1: y = 3
+2: x = 2
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+77	}
+1: y = 3
+2: x = 2
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+replace_tab (tabs=..., sc=..., lines=9) at make_square.c:94
+94				x++;
+88			while (tabs.tab_char[y][x])
+90				if (tabs.tab_int[y][x] == sc.size)
+92					quadruple_center_test(y, x, sc.size, tabs);
+
+Breakpoint 2, quadruple_center_test (y=3, x=3, size=2, tabs=...) at make_square.c:54
+54		if (tabs.tab_int[y][x + 1] == size)
+1: y = 3
+2: x = 3
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+56			if (tabs.tab_int[y + 1][x + 1] == size)
+1: y = 3
+2: x = 3
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+77	}
+1: y = 3
+2: x = 3
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+replace_tab (tabs=..., sc=..., lines=9) at make_square.c:94
+94				x++;
+88			while (tabs.tab_char[y][x])
+90				if (tabs.tab_int[y][x] == sc.size)
+92					quadruple_center_test(y, x, sc.size, tabs);
+
+Breakpoint 2, quadruple_center_test (y=3, x=4, size=2, tabs=...) at make_square.c:54
+54		if (tabs.tab_int[y][x + 1] == size)
+1: y = 3
+2: x = 4
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+56			if (tabs.tab_int[y + 1][x + 1] == size)
+1: y = 3
+2: x = 4
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+77	}
+1: y = 3
+2: x = 4
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+replace_tab (tabs=..., sc=..., lines=9) at make_square.c:94
+94				x++;
+88			while (tabs.tab_char[y][x])
+90				if (tabs.tab_int[y][x] == sc.size)
+92					quadruple_center_test(y, x, sc.size, tabs);
+
+Breakpoint 2, quadruple_center_test (y=3, x=5, size=2, tabs=...) at make_square.c:54
+54		if (tabs.tab_int[y][x + 1] == size)
+1: y = 3
+2: x = 5
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+56			if (tabs.tab_int[y + 1][x + 1] == size)
+1: y = 3
+2: x = 5
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
+77	}
+1: y = 3
+2: x = 5
+3: size = 2
+4: tabs.tab_int[y][x] = 2
+5: tabs.tab_char[y][x] = 88 'X'
