@@ -13,10 +13,10 @@
 #ifndef C_BSQ_H
 # define C_BSQ_H
 
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
+# include <fcntl.h>
+# include <unistd.h>
+# include <stdio.h>
+# include <stdlib.h>
 
 struct s_tabs
 {
@@ -69,5 +69,6 @@ void	quadruple_center_test(int y, int x, int size, t_tabs tabs);
 void	square_replace(int y, int x, int size, t_tabs tabs);
 t_iter	square_loop(t_tabs tabs, t_iter iter, t_square_center sc);
 void	make_square(t_tabs tabs, char *buf);
+void	free_all(t_tabs tabs, char *buf);
 
 #endif
