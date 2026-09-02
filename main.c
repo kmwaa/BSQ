@@ -6,7 +6,7 @@
 /*   By: kmwaa <kmwaa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 10:48:26 by kcacciab          #+#    #+#             */
-/*   Updated: 2026/09/02 22:36:38 by kmwaa            ###   ########.fr       */
+/*   Updated: 2026/09/02 23:26:04 by kmwaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	prepa_main(char *buf, t_tabs tabs)
 		ft_putstr("\n");
 		i++;
 	}
+	free_all(tabs, buf);
 	return (0);
 }
 
@@ -49,9 +50,7 @@ int	main(int argc, char *argv[])
 			tabs.tab_char = ft_tab_1(buf);
 			if (tabs.tab_char == NULL)
 				return (1);
-			tabs.tab_int = ft_tab_2(buf);
 			prepa_main(buf, tabs);
-			free_all(tabs, buf);
 			i++;
 		}
 	}

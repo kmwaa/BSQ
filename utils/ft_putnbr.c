@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                         ::::::::           */
-/*   ft_putnbr.c                                         :+:    :+:           */
-/*                                                      +:+                   */
-/*   By: nchaille <marvin@42.fr>                       +#+                    */
-/*                                                    +#+                     */
-/*   Created: 2026/09/02 10:38:18 by nchaille       #+#    #+#                */
-/*   Updated: 2026/09/02 10:38:23 by nchaille       ########   odam.nl        */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kmwaa <kmwaa@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/02 10:38:18 by nchaille          #+#    #+#             */
+/*   Updated: 2026/09/02 23:21:01 by kmwaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 void	ft_putstr(char *str);
 
@@ -43,7 +44,7 @@ void	ft_putnbr_table(int **tab_2)
 	int	i;
 
 	i = 0;
-	while (i < 10)
+	while (tab_2[i] != NULL)
 	{
 		ft_putnbr_line(tab_2[i]);
 		ft_putstr("\n");
