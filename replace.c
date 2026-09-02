@@ -44,7 +44,6 @@ t_iter	loop_test(t_iter iter, t_square_center sc, t_tabs tabs)
 		iter.j = -1;
 		iter.i++;
 	}
-
 	return (iter);
 }
 
@@ -67,7 +66,6 @@ void	quadruple_center_test(int y, int x, int size, t_tabs tabs)
 		square_replace(y, x + 1, size, tabs);
 		square_replace(y + 1, x + 1, size, tabs);
 		square_replace(y + 1, x, size, tabs);
-
 	}
 	else if (tabs.tab_int[y][x + 1] != size)
 	{

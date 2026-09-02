@@ -12,15 +12,15 @@
 
 #include "c_bsq.h"
 
-int	test_case(t_tabs tabs, int y, int x, int size_y, int size_x)
+int	test_case(t_tabs tabs, int y, int x, t_square_center sc)
 {
 	if (x < 0)
 		return (-1);
 	if (y < 0)
 		return (-1);
-	if (x >= size_x)
+	if (x >= sc.x)
 		return (-1);
-	if (y >= size_y)
+	if (y >= sc.y)
 		return (-1);
 	if (tabs.tab_char[y][x] == '\0')
 		return (-1);
@@ -29,53 +29,50 @@ int	test_case(t_tabs tabs, int y, int x, int size_y, int size_x)
 	return (0);
 }
 
-void	seek(t_tabs tabs, int y, int x, int size_y, int size_x, int dist)
+void	seek(t_tabs tabs, t_iter iter, t_square_center sc, int dist)
 {
-	int	i;
-	int	j;
-	int	test;
+	int				test;
 
 	test = 0;
-	i = dist * -1;
-	j = dist * -1;
-	while (i <= dist && test == 0)
+	iter.i = dist * -1;
+	iter.j = dist * -1;
+	while (iter.i <= dist && test == 0)
 	{
-		while (j <= dist && test == 0)
+		while (iter.j <= dist && test == 0)
 		{
-			test = test_case(tabs, y + i, x + j, size_y, size_x);
-			j++;
+			test = test_case(tabs,
+					iter.y + iter.i, iter.x + iter.j, sc);
+			iter.j++;
 		}
-		j = dist * -1;
-		i++;
+		iter.j = dist * -1;
+		iter.i++;
 	}
-	if (!tabs.tab_int[y][x])
-		tabs.tab_int[y][x] = 0;
+	if (!tabs.tab_int[iter.y][iter.x])
+		tabs.tab_int[iter.y][iter.x] = 0;
 	if (test == 0)
 	{
-		tabs.tab_int[y][x] = tabs.tab_int[y][x] + 1;
-		seek(tabs, y, x, size_y, size_x, dist + 1);
+		tabs.tab_int[iter.y][iter.x] = tabs.tab_int[iter.y][iter.x] + 1;
+		seek(tabs, iter, sc, dist + 1);
 	}
 }
 
 void	add_values(t_tabs tabs, char *buf)
 {
-	int	x;
-	int	y;
-	int	lines;
-	int	columns;
+	t_iter			iter;
+	t_square_center	sc;
 
-	x = 0;
-	y = 0;
-	lines = ft_count_lines(buf);
-	columns = ft_count_colones(buf);
-	while (y < ft_count_lines(buf))
+	iter.x = 0;
+	iter.y = 0;
+	sc.y = ft_count_lines(buf);
+	sc.x = ft_count_colones(buf);
+	while (iter.y < ft_count_lines(buf))
 	{
-		while (tabs.tab_char[y][x])
+		while (tabs.tab_char[iter.y][iter.x])
 		{
-			seek(tabs, y, x, lines, columns, 1);
-			x++;
+			seek(tabs, iter, sc, 1);
+			iter.x++;
 		}
-		x = 0;
-		y++;
+		iter.x = 0;
+		iter.y++;
 	}
 }
