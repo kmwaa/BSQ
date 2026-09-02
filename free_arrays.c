@@ -1,29 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                         ::::::::           */
-/*   ft_count_lines.c                                    :+:    :+:           */
+/*   free_arrays.c                                       :+:    :+:           */
 /*                                                      +:+                   */
-/*   By: nchaille <marvin@42.fr>                       +#+                    */
+/*   By: kcacciab <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
-/*   Created: 2026/09/01 14:53:13 by nchaille       #+#    #+#                */
-/*   Updated: 2026/09/01 14:53:20 by nchaille       ########   odam.nl        */
+/*   Created: 2026/09/02 08:56:28 by kcacciab       #+#    #+#                */
+/*   Updated: 2026/09/02 08:56:30 by kcacciab       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_count_lines(char *str)
+#include "c_bsq.h"
+
+void	free_char_arrays(char **array, int size)
 {
 	int	i;
-	int	c;
 
-	c = 0;
 	i = 0;
-	while (str[i])
+	while (i <= size)
 	{
-		if (str[i] == '\n')
-			c++;
+		free(array[i]);
 		i++;
 	}
-	if (i > 0 && str[i - 1] != '\n')
-		c++;
-	return (c);
+	free(array);
+}
+
+
+
+void	free_int_arrays(int **array, int size)
+{
+	int	i;
+
+	i = 0;
+	while (i <= size)
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
 }
