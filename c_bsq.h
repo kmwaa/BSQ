@@ -41,7 +41,6 @@ struct s_square_center
 	int	y;
 };
 
-
 typedef struct s_square_center	t_square_center ;
 typedef struct s_tabs			t_tabs ;
 typedef struct s_iter			t_iter ;

@@ -32,8 +32,6 @@ void	free_char_arrays(char **array, int size)
 	free(array);
 }
 
-
-
 void	free_int_arrays(int **array, int size)
 {
 	int	i;
