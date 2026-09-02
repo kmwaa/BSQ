@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                         ::::::::           */
-/*   get_ox.c                                            :+:    :+:           */
-/*                                                      +:+                   */
-/*   By: kcacciab <marvin@42.fr>                       +#+                    */
-/*                                                    +#+                     */
-/*   Created: 2026/08/31 10:56:22 by kcacciab       #+#    #+#                */
-/*   Updated: 2026/08/31 10:56:24 by kcacciab       ########   odam.nl        */
+/*                                                        :::      ::::::::   */
+/*   get_ox.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kmwaa <kmwaa@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/08/31 10:56:22 by kcacciab          #+#    #+#             */
+/*   Updated: 2026/09/02 22:31:32 by kmwaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*mal_op_read(char *buf, int *fd, int *res, char *link_file)
 		return (NULL);
 	}
 	*res = read(*fd, buf, 10);
-	if (res < 0)
+	if (*res < 0)
 	{
 		close(*fd);
 		free(buf);
@@ -54,7 +54,9 @@ char	*get_ox(char	*link_file)
 	buf = malloc(sizeof(char) * 1024);
 	if (!buf)
 		return (NULL);
-	mal_op_read(buf, &fd, &res, link_file);
+	buf = mal_op_read(buf, &fd, &res, link_file);
+	if (!buf)
+		return (NULL);
 	buf[res] = '\0';
 	i = res;
 	while (res == i)
