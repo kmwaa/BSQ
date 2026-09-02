@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                         ::::::::           */
-/*   c_bsq.h                                             :+:    :+:           */
-/*                                                      +:+                   */
-/*   By: kcacciab <marvin@42.fr>                       +#+                    */
-/*                                                    +#+                     */
-/*   Created: 2026/09/02 19:44:41 by kcacciab       #+#    #+#                */
-/*   Updated: 2026/09/02 19:44:44 by kcacciab       ########   odam.nl        */
+/*                                                        :::      ::::::::   */
+/*   c_bsq.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kmwaa <kmwaa@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/02 19:44:41 by kcacciab          #+#    #+#             */
+/*   Updated: 2026/09/02 22:54:59 by kmwaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	quadruple_center_test(int y, int x, int size, t_tabs tabs);
 void	replace_tab(t_tabs tabs, t_square_center sc, int lines);
 void	quadruple_center_test(int y, int x, int size, t_tabs tabs);
 void	square_replace(int y, int x, int size, t_tabs tabs);
-t_iter	square_loop(t_tabs tabs, t_iter iter, t_square_center sc);
+t_iter	square_loop(t_tabs tabs, t_iter iter, t_square_center *sc);
 void	make_square(t_tabs tabs, char *buf);
 void	free_all(t_tabs tabs, char *buf);
 
